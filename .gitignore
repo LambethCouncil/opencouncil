@@ -1,43 +1,26 @@
-# Ignore paths that contain user-generated content.
-/sites/*/files
-/sites/*/private
-/files/*
-/cache
+drupal/sites/*/settings.php
+drupal/sites/*/civicrm.settings.php
+drupal/sites/*/files
 
-# ** Only works in OSs that support newer versions of fnmatch (Bash 4+)
-/sites/default/**/files
-/sites/default/**/private
+*~
+\#*\#
 
-# Packages #
-############
-*.7z
-*.dmg
-*.gz
-*.bz2
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
-*.tgz
+*.mysql
+!drupal/sites/all/modules/civicrm/*/*.mysql
+!drupal/sites/all/modules/civicrm/*/*/*.mysql
+!drupal/sites/all/modules/civicrm/*/*/*/*.mysql
+!drupal/sites/all/modules/civicrm/*/*/*/*/*.mysql
 
-# Logs and databases #
-######################
-*.log
 *.sql
+!drupal/modules/simpletest/files/sql-2.sql
+!drupal/sites/all/modules/civicrm/drupal/modules/civicrm_engage/migrate/*.sql
 
-# OS generated files #
-######################
-.DS_Store*
-ehthumbs.db
-Icon?
-Thumbs.db
-._*
+*.tar
 
-# Vim generated files #
-######################
-*.un~
+*.gz
+!drupal/modules/update/tests/aaa_update_test.tar.gz
+!drupal/sites/all/modules/civicrm/packages/jquery/plugins/DataTables-1.7.6/media/js/jquery.dataTables.min.js.gz
+!drupal/sites/all/modules/civicrm/packages/jquery/plugins/DataTables-1.7.6/extras/FixedHeader/js/FixedHeader.min.js.gz
+!drupal/sites/all/modules/civicrm/sql/counties.US.sql.gz
 
-# SASS #
-##########
-.sass-cache
+*.zip
