@@ -1,0 +1,15 @@
+name = feature-place
+core = 7.x
+package = Features
+php = 5.2.4
+dependencies[] = date
+dependencies[] = features
+dependencies[] = geofield
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:1
+features[field][] = node-place-field_geo
+features[field][] = node-place-field_place_introduction
+features[field][] = node-place-field_place_opening_time
+features[node][] = place
+features[views_view][] = map_view
