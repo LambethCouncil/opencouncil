@@ -78,16 +78,16 @@
 }
 
 
-/*base stuff*/
+/*Base*/
 
 body { margin: 0; padding: 0; border: 0; background-color: #ffffff; color: #000000; font-family: verdana, arial, helvetica, sans-serif; font-size: 100%;}
 
 p {font-size: 100%; margin: 3px 0 15px; line-height: 125%}
 
-a {color:#000000; font-weight: bold; text-decoration: none}
-a:link {color: #ff6600; font-weight: bold; text-decoration: none}
-a:visited {color: #aa4800; text-decoration: none}
-a:hover {text-decoration: underline}
+a {color:#40cf40; font-weight: bold; text-decoration: none}
+a:link {color: #40cf40; font-weight: bold; text-decoration: none}
+a:visited {color: #205c20; text-decoration: none}
+a:hover {color: #205c20;text-decoration: underline}
 a[name]:hover {text-decoration: none; color: #000000}
 a:active {color: #000000; background-color: #eeeeee; text-decoration: underline}
 
@@ -113,6 +113,7 @@ sup {padding-top:3px; line-height: 125%}
 textarea {font-size: 70%; font-family: verdana, arial, helvetica, sans-serif}
 .large {font-size: 100%}
 
+
 h1.title
 {
 font-weight: bold; 
@@ -132,6 +133,7 @@ div.field-label-above
 padding-top:20px;
 }
 
+/*Place template*/
 .views-field-field-place-image .field-content img
 {
 border: solid 1px #000;
@@ -168,3 +170,10 @@ width: 300px;
 
 }
 
+.field-name-field-opening-times
+{
+clear:left;
+float:left;
+
+width: 300px;
+}
