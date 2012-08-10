@@ -5,10 +5,10 @@
     width:auto;
 }
 
+/* Search box */
 #block-search-form {
     position:absolute;
-    top:20px;
-    right:0;
+    top:1em; right:0;
 }
 
 /* Main menu */
@@ -26,4 +26,13 @@
     left: 0px;
     position: absolute !important;
     z-index: 999;
+}
+
+#region-menu {
+    width:auto;
+    float:right;
+    padding:6px;
+    position:relative;
+    top:10px;
+    right:-10px;
 }
