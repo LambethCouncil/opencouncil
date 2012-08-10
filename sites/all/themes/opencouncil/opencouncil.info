@@ -5,10 +5,13 @@ engine = phptemplate
 screenshot = screenshot.png
 base theme = omega
 
+
+
 ; REQUIRED CORE REGIONS
 
 regions[page_top] = Page Top
 regions[page_bottom] = Page Bottom
+
 regions[content] = Content
 
 ; ADDITIONAL REGIONS
@@ -24,7 +27,7 @@ regions[sidebar_second] = Sidebar Second
 
 ;regions[header_first] = Header First
 ;regions[header_second] = Header Second
-
+regions[wide_image] = Wide Image
 ;regions[preface_first] = Preface First
 ;regions[preface_second] = Preface Second
 ;regions[preface_third] = Preface Third
@@ -34,8 +37,11 @@ regions[sidebar_second] = Sidebar Second
 ;regions[postscript_third] = Postscript Third
 ;regions[postscript_fourth] = Postscript Fourth
 
+
 regions[footer_first] = Footer First
 ; regions[footer_second] = Footer Second
+
+
 
 ; ZONES
 
@@ -47,12 +53,18 @@ zones[preface] = Preface
 zones[content] = Content
 zones[postscript] = Postscript
 zones[footer] = Footer
+zones[wideimage] = Wide image
 
 ; OPTIONAL STYLESHEETS
 
 css[global.css][name] = Your custom global styles
 css[global.css][description] = This file holds all the globally active custom CSS of your theme.
 css[global.css][options][weight] = 10
+
+css[opencouncil-styles.css][name] = Main theme styles
+css[opencouncil-styles.css][description] = This file holds all the theme styles.
+css[opencouncil-styles.css][options][weight] = 
+
 
 ; THEME SETTINGS (DEFAULTS)
 
@@ -369,6 +381,19 @@ settings[alpha_region_footer_second_columns] = '12'
 settings[alpha_region_footer_second_suffix] = ''
 settings[alpha_region_footer_second_weight] = '2'
 settings[alpha_region_footer_second_css] = ''
+
+settings[alpha_region_wide_image_equal_height_container] = ''
+settings[alpha_region_wide_image_equal_height_element] = ''
+settings[alpha_region_wide_image_force] = ''
+settings[alpha_region_wide_image_zone] = 'wideimage'
+settings[alpha_region_wide_image_prefix] = ''
+settings[alpha_region_wide_image_columns] = '12'
+settings[alpha_region_wide_image_suffix] = ''
+settings[alpha_region_wide_image_weight] = '1'
+settings[alpha_region_wide_image_css] = ''
+
+
+
 ; Information added by drupal.org packaging script on 2012-02-19
 version = "7.x-3.1"
 core = "7.x"
