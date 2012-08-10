@@ -1,12 +1,55 @@
 /* This file will hold styles for the mobile version of your website (mobile first). */
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
 
-/* Search box */
-#block-search-form input.form-text {
-    width:80%;
+/* Typography & font colours*/
+body {
+     font-family:helvetica, arial, sans-serif;
+}
+h1,h2,h3,h4,h5 {
+    font-family:helvetica, arial, sans-serif;
+    color:#795582;
 }
 
+a {color:#000000; font-weight: bold; text-decoration: none}
+a:link {color: #795582; font-weight: bold; text-decoration: none}
+a:visited {color: #795582; text-decoration: none}
+a:hover {text-decoration: underline}
+a[name]:hover {text-decoration: none; color: #000000}
+a:active {color: #000000; background-color: #eeeeee; text-decoration: underline}
+
+h1.title {
+    font-size:3em;
+}
+
+/* Header */
+#section-content {
+    padding-top:6em;
+}
+header#section-header {
+    position:fixed;
+    background:#333;
+    width:100%;
+    z-index:100;
+}
+
+.logo-img {
+    position:relative;
+    top:12px
+}
+
+
 /* Main menu */
+#zone-menu {
+    background:#383838;
+    font-size:0.8em;
+}
+#region-menu {
+    background:#795582;
+}
+#zone-menu a {
+    color:#fff;
+}
+
 #zone-branding-wrapper {
     /*
     fix for ie z-index problem, add this on the top container that holds your menu block
@@ -72,9 +115,16 @@
 /* doit-box */
 .doit-box {
    border:solid 1px #000;
-   background:#fafafa;
+   background:#ffffaa;
    font-size:150%;
    padding:1em;
+}
+
+/* Footer */
+footer#section-footer {
+    background:#ddd;
+    min-height:8em;
+    border-top:solid 1px #808080;
 }
 
 
@@ -83,13 +133,6 @@
 body { margin: 0; padding: 0; border: 0; background-color: #ffffff; color: #000000; font-family: verdana, arial, helvetica, sans-serif; font-size: 100%;}
 
 p {font-size: 100%; margin: 3px 0 15px; line-height: 125%}
-
-a {color:#40cf40; font-weight: bold; text-decoration: none}
-a:link {color: #40cf40; font-weight: bold; text-decoration: none}
-a:visited {color: #205c20; text-decoration: none}
-a:hover {color: #205c20;text-decoration: underline}
-a[name]:hover {text-decoration: none; color: #000000}
-a:active {color: #000000; background-color: #eeeeee; text-decoration: underline}
 
 h2 {font-weight: bold; font-size: 80%; margin: 0}
 h3 {font-weight: bold; font-size: 70%; margin: 0}
@@ -112,14 +155,6 @@ sub {padding-bottom:3px; line-height: 125%}
 sup {padding-top:3px; line-height: 125%}
 textarea {font-size: 70%; font-family: verdana, arial, helvetica, sans-serif}
 .large {font-size: 100%}
-
-
-h1.title
-{
-font-weight: bold; 
-font-size: 130%; 
-margin: 0;
-}
 
 .field
 {
