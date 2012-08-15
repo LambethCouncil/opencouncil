@@ -27,7 +27,7 @@ regions[sidebar_second] = Sidebar Second
 
 regions[header_first] = Header First
 regions[header_second] = Header Second
-regions[wide_image] = Wide Image
+;regions[wide_image] = Wide Image
 regions[preface_first] = Preface First
 regions[preface_second] = Preface Second
 regions[preface_third] = Preface Third
@@ -39,7 +39,7 @@ regions[postscript_fourth] = Postscript Fourth
 
 
 regions[footer_first] = Footer First
-; regions[footer_second] = Footer Second
+regions[footer_second] = Footer Second
 
 
 
