@@ -121,13 +121,12 @@ header#section-header {
 }
 
 .view-do-it-intro .views-field-field-link {
-    border:solid 1px #fff;
-    background-color:#795582;
+    border:solid 1px #808080;
+    background-color:#fafafa;
     padding:0.5em;
 }
 
 .view-do-it-intro .views-field-field-link a, .view-do-it-intro .views-field-field-link a:visited, .view-do-it-intro .views-field-field-link a:active {
-    color:#fff;
     width:auto;
 }
 
