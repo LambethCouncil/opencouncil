@@ -1,0 +1,10 @@
+- spacing around 'do it' button
+- add services to services taxonomy
+- add map link to address on place page
+- add news content type
+- show events on place page
+- add guidance content type
+
+Done:
+- place: move all metadata to right hand column
+- add event content type
