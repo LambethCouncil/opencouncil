@@ -120,7 +120,9 @@ header#section-header {
    padding:1em;
 }
 
-
+.view-do-it-intro .views-field-field-link {
+    margin-top:1em;
+}
 .view-do-it-intro .views-field-field-link a, .view-do-it-intro .views-field-field-link a:visited, .view-do-it-intro .views-field-field-link a:active {
     border:outset 3px #808080;
     background-color:#fafafa;
