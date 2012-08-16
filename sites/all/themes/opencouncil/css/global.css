@@ -113,11 +113,18 @@ header#section-header {
 }
 
 /* doit-box */
-.doit-box {
+.view-do-it-intro {
    border:solid 1px #000;
    background:#ffffaa;
    font-size:150%;
    padding:1em;
+}
+
+.view-do-it-intro .views-field-field-link {
+    border:solid 1px #fff;
+    background-color:#795582;
+    color:#fff;
+    padding:0.5em;
 }
 
 /* Footer */
@@ -127,7 +134,7 @@ footer#section-footer {
     border-top:solid 1px #808080;
 }
 
-
+/*
 /*Base*/
 
 body { margin: 0; padding: 0; border: 0; background-color: #ffffff; color: #000000; font-family: verdana, arial, helvetica, sans-serif; font-size: 100%;}
@@ -155,7 +162,7 @@ sub {padding-bottom:3px; line-height: 125%}
 sup {padding-top:3px; line-height: 125%}
 textarea {font-size: 70%; font-family: verdana, arial, helvetica, sans-serif}
 .large {font-size: 100%}
-
+*/
 .field
 {
 font-weight: normal; 
