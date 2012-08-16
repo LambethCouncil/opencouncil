@@ -120,14 +120,11 @@ header#section-header {
    padding:1em;
 }
 
-.view-do-it-intro .views-field-field-link {
-    border:solid 1px #808080;
-    background-color:#fafafa;
-    padding:0.5em;
-}
 
 .view-do-it-intro .views-field-field-link a, .view-do-it-intro .views-field-field-link a:visited, .view-do-it-intro .views-field-field-link a:active {
-    width:auto;
+    border:outset 3px #808080;
+    background-color:#fafafa;
+    padding:0.5em;
 }
 
 /* Footer */
