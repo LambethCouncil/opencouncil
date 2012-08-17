@@ -2,7 +2,9 @@
   <div class="content"<?php print $content_attributes; ?>>
 
 		<?php
+		print 'pre';		
 		if (!empty($content['field_guidance_part'])) {
+			print 'start';
 		  foreach ($content['field_guidance_part']['#items'] as $entity_uri) {
 		    $a_field_collection_item = entity_load('field_collection_item', $entity_uri);
 
