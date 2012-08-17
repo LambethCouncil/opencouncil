@@ -4,6 +4,7 @@
 	   //Now you have a variable with the entity object loaded in it, and you can do stuff. 
 	   foreach ($items as $item ) {
 	    	print render($item);
+				print "XXXXX";
 	   }
 
 	 }
