@@ -7,7 +7,6 @@
     if (isset($content['field_content'])) {
       	print $content['field_content'][0]['#markup']
       }
-    }
     ?>
   </div>
 </div>
