@@ -1,3 +1,3 @@
 <?php
-	print render($content['field_guidance_part']); 
+	print_r($content['field_guidance_part']); 
 ?>
