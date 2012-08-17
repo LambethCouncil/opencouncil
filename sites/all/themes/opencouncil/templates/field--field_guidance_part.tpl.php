@@ -1,11 +1,8 @@
-<?php
-	foreach ($content['#items'] as $entity_uri) {
-	   $items = entity_load('field_guidance_part', $entity_uri);
-	   //Now you have a variable with the entity object loaded in it, and you can do stuff. 
-	   foreach ($items as $item ) {
-	    	print render($item);
-				print "XXXXX";
-	   }
-
-	 }
-?>
+<div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+  <div class="content"<?php print $content_attributes; ?>>
+    <?php
+      print '<h2>' . render($content['field_title']) . '</h2>';
+      print render($content['field_content']);
+    ?>
+  </div>
+</div>
