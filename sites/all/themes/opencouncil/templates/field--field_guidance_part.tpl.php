@@ -5,7 +5,7 @@
 	      print '<h2>' . $content['field_title'][0]['#markup'] . '</h2>';
 	    }
 	    if (isset($content['field_content'])) {
-	      	print $content['field_content'][0]['#markup']
+	      	print $content['field_content'][0]['#markup'];
 	     }
     ?>
   </div>
