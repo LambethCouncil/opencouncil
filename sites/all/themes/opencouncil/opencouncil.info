@@ -6,6 +6,10 @@ screenshot = screenshot.png
 base theme = omega
 
 
+; ML 2012-10-10
+scripts[] = js/map-switcher.js
+
+
 
 ; REQUIRED CORE REGIONS
 
