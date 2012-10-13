@@ -205,18 +205,18 @@ width: 300px;
 /* display: inline-block; */
 /* height: 85px; */
 /* width: 85px; */
-  text-indent: 100%     !important;
-  white-space: nowrap   !important;
-  overflow: hidden      !important;
+  /* text-indent: 100%     !important; */
+  /* white-space: nowrap   !important; */
+  /* overflow: hidden      !important; */
 }
 
 .dataLayersDiv input[name='Police Stations'] + .labelSpan{
-background-image: url('/sites/all/themes/opencouncil/images/police-stations-on.png');
-// below applies to all labelSpans
-background-repeat: no-repeat;
-display: inline-block;
-height: 85px;
-width: 85px;
+/* background-image: url('/sites/all/themes/opencouncil/images/police-stations-on.png'); */
+/* background-repeat: no-repeat; */
+/* display: inline-block; */
+/* height: 85px; */
+/* width: 85px; */
+/* text-indent: 100%; */
 }
 
 .dataLayersDiv input {
