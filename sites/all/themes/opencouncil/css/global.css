@@ -259,3 +259,8 @@ width: 300px;
 .dataLayersDiv br {
   display: none;
 }
+
+// This is the block containing the images
+.block-block-1 p {
+  display: none;
+}
