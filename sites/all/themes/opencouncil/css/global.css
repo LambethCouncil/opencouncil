@@ -200,59 +200,62 @@ width: 300px;
 // map page switcher style
 // NOTE: name='adventure-playgrounds' - the title of the view pane MUST be the same.
 //
-/*
 .dataLayersDiv input[name='cycle-stands'] + .labelSpan{
-  background-image: url('/sites/all/themes/opencouncil/images/cycle-stands-off.png');
+  background-image: url('/sites/all/themes/opencouncil/images/cycle-stands-on.png');
   background-repeat: no-repeat;
   display: inline-block;
   height: 85px;
   width: 85px;
   text-indent: -9999px;
+  padding-right:10px;
 }
 
 .dataLayersDiv input[name='car-parks'] + .labelSpan{
-  background-image: url('/sites/all/themes/opencouncil/images/car-parks-off.png');
+  background-image: url('/sites/all/themes/opencouncil/images/car-parks-on.png');
   background-repeat: no-repeat;
   display: inline-block;
   height: 85px;
   width: 85px;
   text-indent: -9999px;
+  padding-right:10px;
 }
 
 .dataLayersDiv input[name='adventure-playgrounds'] + .labelSpan{
-  background-image: url('/sites/all/themes/opencouncil/images/adventure-playgrounds-off.png');
+  background-image: url('/sites/all/themes/opencouncil/images/adventure-playgrounds-on.png');
   background-repeat: no-repeat;
   display: inline-block;
   height: 85px;
   width: 85px;
   text-indent: -9999px;
+  padding-right:10px;
 }
 
 
 .dataLayersDiv input[name='childrens-centres'] + .labelSpan{
-  background-image: url('/sites/all/themes/opencouncil/images/childrens-centres-off.png');
+  background-image: url('/sites/all/themes/opencouncil/images/childrens-centres-on.png');
   background-repeat: no-repeat;
   display: inline-block;
   height: 85px;
   width: 85px;
   text-indent: -9999px;
+  padding-right:10px;
 }
 
 
 .dataLayersDiv input[name='police-stations'] + .labelSpan{
-  background-image: url('/sites/all/themes/opencouncil/images/police-stations-off.png');
+  background-image: url('/sites/all/themes/opencouncil/images/police-stations-on.png');
   background-repeat: no-repeat;
   display: inline-block;
   height: 85px;
   width: 85px;
   text-indent: -9999px;
+  padding-right:10px;
 }
-*/
 
 .dataLayersDiv input {
   display: none;
 }
 
 .dataLayersDiv br {
-  /* display: none; */
+  display: none;
 }
