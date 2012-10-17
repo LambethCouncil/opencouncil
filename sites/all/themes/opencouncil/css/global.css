@@ -252,6 +252,16 @@ width: 300px;
   padding-right:10px;
 }
 
+.dataLayersDiv input[name='community-toilets'] + .labelSpan{
+  background-image: url('/sites/all/themes/opencouncil/images/community-toilets-on.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 85px;
+  width: 85px;
+  text-indent: -9999px;
+  padding-right:10px;
+}
+
 .dataLayersDiv input {
   display: none;
 }
