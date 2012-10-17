@@ -214,8 +214,8 @@ width: 300px;
   background-image: url('/sites/all/themes/opencouncil/images/police-stations-on.png');
   background-repeat: no-repeat;
   display: inline-block;
-height: 85px;
-width: 85px;
+  height: 85px;
+  width: 85px;
 /* text-indent: 100%; */
 }
 
