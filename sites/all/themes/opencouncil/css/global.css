@@ -199,6 +199,7 @@ width: 300px;
 
 // map page switcher style
 // NOTE: name='adventure-playgrounds' - the title of the view pane MUST be the same.
+//
 
 .dataLayersDiv input[name='cycle-stands'] + .labelSpan{
   background-image: url('/sites/all/themes/opencouncil/images/cycle-stands-on.png');
