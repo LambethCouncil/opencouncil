@@ -228,7 +228,7 @@ width: 300px;
 }
 
 .dataLayersDiv input[name='cycle-stands'] + .labelSpan{
-  background-image: url('/sites/all/themes/opencouncil/images/police-stations-on.png');
+  background-image: url('/sites/all/themes/opencouncil/images/cycle-stands-on.png');
   background-repeat: no-repeat;
   display: inline-block;
   height: 85px;
