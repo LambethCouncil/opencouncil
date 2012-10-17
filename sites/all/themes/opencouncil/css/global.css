@@ -200,7 +200,7 @@ width: 300px;
 // map page switcher style
 // NOTE: name='adventure-playgrounds' - the title of the view pane MUST be the same.
 //
-
+/*
 .dataLayersDiv input[name='cycle-stands'] + .labelSpan{
   background-image: url('/sites/all/themes/opencouncil/images/cycle-stands-off.png');
   background-repeat: no-repeat;
@@ -247,12 +247,12 @@ width: 300px;
   width: 85px;
   text-indent: -9999px;
 }
-
+*/
 
 .dataLayersDiv input {
   display: none;
 }
 
 .dataLayersDiv br {
-  display: none;
+  /* display: none; */
 }
