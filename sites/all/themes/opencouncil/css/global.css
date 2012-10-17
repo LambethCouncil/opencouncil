@@ -216,7 +216,7 @@ width: 300px;
   display: inline-block;
   height: 85px;
   width: 85px;
-/* text-indent: 100%; */
+  text-indent: -9999px;
 }
 
 .dataLayersDiv input {
