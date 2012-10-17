@@ -262,6 +262,16 @@ width: 300px;
   padding-right:10px;
 }
 
+.dataLayersDiv input[name='food-growing-projects'] + .labelSpan{
+  background-image: url('/sites/all/themes/opencouncil/images/food-growing-projects-on.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 85px;
+  width: 85px;
+  text-indent: -9999px;
+  padding-right:10px;
+}
+
 .dataLayersDiv input {
   display: none;
 }
