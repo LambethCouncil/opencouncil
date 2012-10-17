@@ -198,19 +198,9 @@ width: 300px;
 }
 
 // map page switcher style
+// NOTE: name='adventure-playgrounds' - the title of the view pane MUST be the same.
 
-.dataLayersDiv .labelSpan {
-/* border: 5px solid red; */
-/* background-repeat: no-repeat; */
-/* display: inline-block; */
-/* height: 85px; */
-/* width: 85px; */
-  /* text-indent: 100%     !important; */
-  /* white-space: nowrap   !important; */
-  /* overflow: hidden      !important; */
-}
-
-.dataLayersDiv input[name='Police Stations'] + .labelSpan{
+.dataLayersDiv input[name='adventure-playgrounds'] + .labelSpan{
   background-image: url('/sites/all/themes/opencouncil/images/police-stations-on.png');
   background-repeat: no-repeat;
   display: inline-block;
@@ -218,6 +208,43 @@ width: 300px;
   width: 85px;
   text-indent: -9999px;
 }
+
+.dataLayersDiv input[name='car-parks'] + .labelSpan{
+  background-image: url('/sites/all/themes/opencouncil/images/police-stations-on.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 85px;
+  width: 85px;
+  text-indent: -9999px;
+}
+
+.dataLayersDiv input[name='childrens-centres'] + .labelSpan{
+  background-image: url('/sites/all/themes/opencouncil/images/police-stations-on.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 85px;
+  width: 85px;
+  text-indent: -9999px;
+}
+
+.dataLayersDiv input[name='cycle-stands'] + .labelSpan{
+  background-image: url('/sites/all/themes/opencouncil/images/police-stations-on.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 85px;
+  width: 85px;
+  text-indent: -9999px;
+}
+
+.dataLayersDiv input[name='police-stations'] + .labelSpan{
+  background-image: url('/sites/all/themes/opencouncil/images/police-stations-on.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 85px;
+  width: 85px;
+  text-indent: -9999px;
+}
+
 
 .dataLayersDiv input {
 /* display: none; */
