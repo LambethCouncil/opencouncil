@@ -209,6 +209,15 @@ width: 300px;
   text-indent: -9999px;
 }
 
+.dataLayersDiv input[name='car-parks'] + .labelSpan{
+  background-image: url('/sites/all/themes/opencouncil/images/car-parks-on.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 85px;
+  width: 85px;
+  text-indent: -9999px;
+}
+
 .dataLayersDiv input[name='adventure-playgrounds'] + .labelSpan{
   background-image: url('/sites/all/themes/opencouncil/images/police-stations-on.png');
   background-repeat: no-repeat;
@@ -218,14 +227,6 @@ width: 300px;
   text-indent: -9999px;
 }
 
-.dataLayersDiv input[name='car-parks'] + .labelSpan{
-  background-image: url('/sites/all/themes/opencouncil/images/police-stations-on.png');
-  background-repeat: no-repeat;
-  display: inline-block;
-  height: 85px;
-  width: 85px;
-  text-indent: -9999px;
-}
 
 .dataLayersDiv input[name='childrens-centres'] + .labelSpan{
   background-image: url('/sites/all/themes/opencouncil/images/police-stations-on.png');
