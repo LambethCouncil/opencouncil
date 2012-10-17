@@ -200,6 +200,15 @@ width: 300px;
 // map page switcher style
 // NOTE: name='adventure-playgrounds' - the title of the view pane MUST be the same.
 
+.dataLayersDiv input[name='cycle-stands'] + .labelSpan{
+  background-image: url('/sites/all/themes/opencouncil/images/cycle-stands-on.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 85px;
+  width: 85px;
+  text-indent: -9999px;
+}
+
 .dataLayersDiv input[name='adventure-playgrounds'] + .labelSpan{
   background-image: url('/sites/all/themes/opencouncil/images/police-stations-on.png');
   background-repeat: no-repeat;
@@ -227,14 +236,6 @@ width: 300px;
   text-indent: -9999px;
 }
 
-.dataLayersDiv input[name='cycle-stands'] + .labelSpan{
-  background-image: url('/sites/all/themes/opencouncil/images/cycle-stands-on.png');
-  background-repeat: no-repeat;
-  display: inline-block;
-  height: 85px;
-  width: 85px;
-  text-indent: -9999px;
-}
 
 .dataLayersDiv input[name='police-stations'] + .labelSpan{
   background-image: url('/sites/all/themes/opencouncil/images/police-stations-on.png');
