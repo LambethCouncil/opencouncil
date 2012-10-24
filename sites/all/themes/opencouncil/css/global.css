@@ -43,6 +43,10 @@ header#section-header {
     top:0;
 }
 
+/* on mobile allow a little space to left of map */
+#zone-content {
+  padding-left: 20px;
+}
 
 /* Main menu */
 #zone-menu {
@@ -277,6 +281,16 @@ width: 300px;
 
 .dataLayersDiv input[name='libraries'] + .labelSpan{
   background-image: url('/sites/all/themes/opencouncil/images/libraries-on.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 85px;
+  width: 85px;
+  text-indent: -9999px;
+  padding-right:10px;
+}
+
+.dataLayersDiv input[name='recycling'] + .labelSpan{
+  background-image: url('/sites/all/themes/opencouncil/images/recycling-on.png');
   background-repeat: no-repeat;
   display: inline-block;
   height: 85px;
