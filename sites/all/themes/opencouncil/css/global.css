@@ -37,7 +37,10 @@ header#section-header {
 
 .logo-img {
     position:relative;
-    top:12px
+    /* this is the value for desktops */
+    /* top:12px; */
+    /* this is the value for mobile */
+    top:0;
 }
 
 
