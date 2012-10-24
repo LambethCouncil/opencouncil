@@ -1,5 +1,13 @@
 /* This file will hold styles for all layouts using the alpha grid (i.e. not the mobile layout). */
 
+.logo-img {
+    position:relative;
+    /* this is the value for desktops */
+    top:12px;
+    /* this is the value for mobile */
+    /* top:0; */
+}
+
 /* Search box */
 #block-search-form input.form-text {
     width:auto;
