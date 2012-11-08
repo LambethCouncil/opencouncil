@@ -1,0 +1,4 @@
+name = "map_center"
+description = "Geocode a user search and center the OpenLayers map."
+core = "7.x"
+package = "Custom"

@@ -1,0 +1,46 @@
+<?php
+/**
+ * Implementation of hook_block_info().
+ */
+function map_center_block_info() {
+  $blocks['map-center-block'] = array(
+    'info' => t('Map center block'),
+  );
+  return $blocks;
+}
+
+/**
+ * Implementation of hook_block_view().
+ */
+function map_center_block_view($delta = '') {
+  $block = array();
+  switch ($delta) {
+    case 'map-center-block':
+      $block['content'] = _map_center_content();
+      break;
+  }
+  return $block;
+}
+
+/**
+ * custom html block
+ * @return string
+ */
+function _map_center_content() {
+  return "<div>
+      <button id='map_center_brixton'>Brixton</button>
+      <button id='map_center_clapham'>Clapham</button>
+      <button id='map_center_crystal-palace'>Crystal Palace</button>
+      <button id='map_center_gipsy-hill'>Gipsy Hill</button>
+      <button id='map_center_herne-hill'>Herne Hill</button>
+      <button id='map_center_kennington'>Kennington</button>
+      <button id='map_center_oval'>Oval</button>
+      <button id='map_center_stockwell'>Stockwell</button>
+      <button id='map_center_streatham'>Streatham</button>
+      <button id='map_center_tulse-hill'>Tulse Hill</button>
+      <button id='map_center_vauxhall'>Vauxhall</button>
+      <button id='map_center_west-dulwich'>West Dulwich</button>
+      <button id='map_center_west-norwood'>West Norwood</button>
+    </div>";
+}
+
