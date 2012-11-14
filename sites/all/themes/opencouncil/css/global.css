@@ -277,6 +277,8 @@ width: 300px;
   width: 85px;
   text-indent: -9999px;
   padding-right:10px;
+  /* http://flipc.blogspot.co.uk/2009/02/damn-ie7-and-inline-block.html */
+  zoom:1;*display:inline;_height:85px;
 }
 
 .dataLayersDiv input[name='libraries'] + .labelSpan{
