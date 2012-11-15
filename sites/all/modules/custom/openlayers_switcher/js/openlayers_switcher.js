@@ -8,12 +8,9 @@
           var ol = $('.openlayers-map').data('openlayers');
           var layers = ol.openlayers.getLayersByName(layername);
           for (var i = 0; i < layers.length; ++i) {
-            if (layers[i].name = layername) {
-              break;
-            }
+            alert(layers[i].name);
           }
           var currently_visible = layers[i].visibility;
-          alert(currently_visible);
           // layers[i].setVisibility(!currently_visible);
           //_openlayers_switcher_show_layer(ol, layername);
         });
