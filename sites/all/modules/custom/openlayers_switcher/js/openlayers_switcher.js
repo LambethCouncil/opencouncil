@@ -3,6 +3,7 @@
     attach: function(context, settings) {
       $(document).ready(function() {
         $('#openlayers-switcher-block--food-growing-projects').click(function(e) {
+          e.stopPropagation();
           var layername = 'food-growing-projects';
           var ol = $('.openlayers-map').data('openlayers');
           _openlayers_switcher_show_layer(ol, layername);
