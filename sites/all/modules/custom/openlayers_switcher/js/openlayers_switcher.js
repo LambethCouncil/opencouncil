@@ -2,7 +2,7 @@
   Drupal.behaviors.openlayers_switcher = {
     attach: function(context, settings) {
       $(document).ready(function() {
-        $('#map-switcher-block--food-growing-projects').click(function(e) {
+        $('#openlayers-switcher-block--food-growing-projects').click(function(e) {
           var layername = 'food-growing-projects';
           var ol = $('.openlayers-map').data('openlayers');
           _openlayers_switcher_show_layer(ol, layername);
