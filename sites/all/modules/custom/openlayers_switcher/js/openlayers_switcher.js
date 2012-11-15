@@ -45,12 +45,12 @@ function _openlayers_switcher_show_layer(ol, layername) {
   // toggle visibility
   // alert(currently_visible);
   // alert(layer_index);
-  // if (currently_visible) {
-    // layers[layer_index].setVisibility(false);
-  // }
-  // else {
+  if (currently_visible) {
+    layers[layer_index].setVisibility(false);
+  }
+  else {
     layers[layer_index].setVisibility(true);
-  // }
+  }
 }
 
 function _openlayers_switcher_show_all_layers(ol) {
