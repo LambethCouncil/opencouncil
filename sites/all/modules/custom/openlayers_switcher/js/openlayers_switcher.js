@@ -6,7 +6,14 @@
           e.stopPropagation();
           var layername = 'food-growing-projects';
           var ol = $('.openlayers-map').data('openlayers');
-          _openlayers_switcher_show_layer(ol, layername);
+          var layers = ol.openlayers.layers;
+          for (var i = 0; i < layers.length; ++i) {
+            if (layers[i].name = layername) {
+              break;
+            }
+          }
+          alert(layers[i].visibility);
+          //_openlayers_switcher_show_layer(ol, layername);
         });
       });
     }
