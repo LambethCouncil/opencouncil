@@ -3,18 +3,17 @@
     attach: function(context, settings) {
       $(document).ready(function() {
         $('#openlayers-switcher-block--food-growing-projects').click(function(e) {
-          e.stopPropagation();
           var layername = 'food-growing-projects';
           var ol = $('.openlayers-map').data('openlayers');
           var layers = ol.openlayers.getLayersByName(layername);
-          if (layers[0].visibility) {
-            layers[0].setVisibility(false);
-          }
-          else {
-            layers[0].setVisibility(true);
-          }
-          // layers[i].setVisibility(!currently_visible);
-          //_openlayers_switcher_show_layer(ol, layername);
+          layers[0].setVisibility(true);
+          // this doesn't work
+          // if (layers[0].visibility) {
+            // layers[0].setVisibility(false);
+          // }
+          // else {
+            // layers[0].setVisibility(true);
+          // }
         });
       });
     }
