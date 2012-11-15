@@ -44,7 +44,7 @@ function _openlayers_switcher_content() {
       <a id='openlayers-switcher-block--adventure-playgrounds'></a>
       <a id='openlayers-switcher-block--car-parks'></a>
       <a id='openlayers-switcher-block--childrens-centres'></a>
-      <a id='openlayers-switcher-block--cycle-stands'></a>
+      <!-- <a id='openlayers-switcher-block--cycle-stands'></a> -->
       <a id='openlayers-switcher-block--police-stations'></a>
       <a id='openlayers-switcher-block--community-toilets'></a>
       <a id='openlayers-switcher-block--food-growing-projects'></a>
