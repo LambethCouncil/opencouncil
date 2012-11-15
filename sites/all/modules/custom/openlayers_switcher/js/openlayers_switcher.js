@@ -7,7 +7,12 @@
           var layername = 'food-growing-projects';
           var ol = $('.openlayers-map').data('openlayers');
           var layers = ol.openlayers.getLayersByName(layername);
-          layers[0].setVisibility(true);
+          if (layers[0].visiblity) {
+            layers[0].setVisibility(false);
+          }
+          else {
+            layers[0].setVisibility(true);
+          }
           for (var i = 0; i < layers.length; ++i) {
             alert(layers[i].name);
           }
