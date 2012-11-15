@@ -14,7 +14,7 @@
           }
           var currently_visible = layers[i].visibility;
           alert(currently_visible);
-          layers[i].setVisibility(!currently_visible);
+          // layers[i].setVisibility(!currently_visible);
           //_openlayers_switcher_show_layer(ol, layername);
         });
       });
