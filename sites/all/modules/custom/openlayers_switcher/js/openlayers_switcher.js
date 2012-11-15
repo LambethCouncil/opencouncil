@@ -3,6 +3,7 @@
     attach: function(context, settings) {
       $(document).ready(function() {
         $('[id^=openlayers-switcher-block--]').click(function(e) {
+          $(this).toggleClass('active');
           // 27 is the length of 'openlayers-switcher-block--'
           // layername is the string following that.
           var layername = e.target.id.substring(27);
