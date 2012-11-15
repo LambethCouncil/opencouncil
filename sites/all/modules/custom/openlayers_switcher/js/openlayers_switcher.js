@@ -37,7 +37,7 @@ function _openlayers_switcher_show_layer(ol, layername) {
         // get current visibility
         currently_visible = layers[i].visibility;
         layer_index = i;
-        //alert(currently_visible);
+        alert(currently_visible);
         }
       }
     }
