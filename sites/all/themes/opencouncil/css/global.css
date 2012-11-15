@@ -207,7 +207,7 @@ width: 300px;
 // map page switcher style
 // NOTE: name='adventure-playgrounds' - the title of the view pane MUST be the same.
 //
-.dataLayersDiv input[name='cycle-stands'] + .labelSpan{
+#map-switcher-block--cycle-stands {
   background-image: url('/sites/all/themes/opencouncil/images/cycle-stands-on.png');
   background-repeat: no-repeat;
   display: inline-block;
@@ -217,7 +217,7 @@ width: 300px;
   padding-right:10px;
 }
 
-.dataLayersDiv input[name='car-parks'] + .labelSpan{
+#map-switcher-block--car-parks {
   background-image: url('/sites/all/themes/opencouncil/images/car-parks-on.png');
   background-repeat: no-repeat;
   display: inline-block;
@@ -227,7 +227,7 @@ width: 300px;
   padding-right:10px;
 }
 
-.dataLayersDiv input[name='adventure-playgrounds'] + .labelSpan{
+#map-switcher-block--adventure-playgrounds {
   background-image: url('/sites/all/themes/opencouncil/images/adventure-playgrounds-on.png');
   background-repeat: no-repeat;
   display: inline-block;
@@ -238,7 +238,7 @@ width: 300px;
 }
 
 
-.dataLayersDiv input[name='childrens-centres'] + .labelSpan{
+#map-switcher-block--childrens-centres {
   background-image: url('/sites/all/themes/opencouncil/images/childrens-centres-on.png');
   background-repeat: no-repeat;
   display: inline-block;
@@ -249,7 +249,7 @@ width: 300px;
 }
 
 
-.dataLayersDiv input[name='police-stations'] + .labelSpan{
+#map-switcher-block--police-stations {
   background-image: url('/sites/all/themes/opencouncil/images/police-stations-on.png');
   background-repeat: no-repeat;
   display: inline-block;
@@ -259,7 +259,7 @@ width: 300px;
   padding-right:10px;
 }
 
-.dataLayersDiv input[name='community-toilets'] + .labelSpan{
+#map-switcher-block--community-toilets {
   background-image: url('/sites/all/themes/opencouncil/images/community-toilets-on.png');
   background-repeat: no-repeat;
   display: inline-block;
@@ -269,7 +269,7 @@ width: 300px;
   padding-right:10px;
 }
 
-.dataLayersDiv input[name='food-growing-projects'] + .labelSpan{
+#map-switcher-block--food-growing-projects {
   background-image: url('/sites/all/themes/opencouncil/images/food-growing-projects-on.png');
   background-repeat: no-repeat;
   display: inline-block;
@@ -277,11 +277,9 @@ width: 300px;
   width: 85px;
   text-indent: -9999px;
   padding-right:10px;
-  /* http://flipc.blogspot.co.uk/2009/02/damn-ie7-and-inline-block.html */
-  zoom:1;*display:inline;_height:85px;
 }
 
-.dataLayersDiv input[name='libraries'] + .labelSpan{
+#map-switcher-block--libraries {
   background-image: url('/sites/all/themes/opencouncil/images/libraries-on.png');
   background-repeat: no-repeat;
   display: inline-block;
@@ -291,8 +289,38 @@ width: 300px;
   padding-right:10px;
 }
 
-.dataLayersDiv input[name='recycling'] + .labelSpan{
+#map-switcher-block--recycling {
   background-image: url('/sites/all/themes/opencouncil/images/recycling-on.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 85px;
+  width: 85px;
+  text-indent: -9999px;
+  padding-right:10px;
+}
+
+#map-switcher-block--primary-schools {
+  background-image: url('/sites/all/themes/opencouncil/images/primary-schools-on.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 85px;
+  width: 85px;
+  text-indent: -9999px;
+  padding-right:10px;
+}
+
+#map-switcher-block--secondary-schools {
+  background-image: url('/sites/all/themes/opencouncil/images/secondary-schools-on.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 85px;
+  width: 85px;
+  text-indent: -9999px;
+  padding-right:10px;
+}
+
+#map-switcher-block--nursery-schools {
+  background-image: url('/sites/all/themes/opencouncil/images/nursery-schools-on.png');
   background-repeat: no-repeat;
   display: inline-block;
   height: 85px;
