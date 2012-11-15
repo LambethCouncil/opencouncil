@@ -7,16 +7,12 @@
           var layername = 'food-growing-projects';
           var ol = $('.openlayers-map').data('openlayers');
           var layers = ol.openlayers.getLayersByName(layername);
-          if (layers[0].visiblity) {
+          if (layers[0].visibility) {
             layers[0].setVisibility(false);
           }
           else {
             layers[0].setVisibility(true);
           }
-          for (var i = 0; i < layers.length; ++i) {
-            alert(layers[i].name);
-          }
-          var currently_visible = layers[i].visibility;
           // layers[i].setVisibility(!currently_visible);
           //_openlayers_switcher_show_layer(ol, layername);
         });
