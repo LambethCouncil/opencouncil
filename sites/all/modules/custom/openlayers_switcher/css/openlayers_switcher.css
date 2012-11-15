@@ -2,7 +2,7 @@
 	margin-top: 10px;
 }
 
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block span {
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block a {
 	background-repeat: no-repeat;
 	display: block;
 	float: left;
@@ -12,7 +12,7 @@
 	padding: 5px;
 }
 
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block span:hover {
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block a:hover {
 	opacity: 0.9;
 }
 
