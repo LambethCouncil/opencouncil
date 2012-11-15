@@ -1,0 +1,59 @@
+<?php
+/**
+ * Implementation of hook_block_info().
+ */
+function openlayers_switcher_block_info() {
+  $blocks['openlayers-switcher-block'] = array(
+    'info' => t('Map switcher block'),
+  );
+  return $blocks;
+}
+
+/**
+ * Implementation of hook_block_view().
+ */
+function openlayers_switcher_block_view($delta = '') {
+  // http://www.jaypan.com/tutorial/adding-css-and-js-cached-block-drupal-7
+  switch ($delta) {
+    case 'openlayers-switcher-block':
+      $block = array(
+        'content' => array(
+          '#markup' => _openlayers_switcher_content(),
+          '#attached' => array(
+            'js' => array(
+              drupal_get_path('module', 'openlayers_switcher') . '/js/openlayers_switcher.js',
+            ),
+            'css' => array(
+              drupal_get_path('module', 'openlayers_switcher') . '/css/openlayers_switcher.css',
+            ),
+          ),
+        ),
+      );
+      break;
+  }
+  return $block;
+}
+
+/**
+ * custom html block
+ * @return string
+ */
+function _openlayers_switcher_content() {
+  $images_dir = drupal_get_path('theme', 'opencouncil') . '/images/';
+  return "<div id='map-swicher-block'>
+      <span id='openlayers-switcher-block--adventure-playgrounds'></span>
+      <span id='openlayers-switcher-block--car-parks'></span>
+      <span id='openlayers-switcher-block--childrens-centres'></span>
+      <span id='openlayers-switcher-block--cycle-stands'></span>
+      <span id='openlayers-switcher-block--police-stations'></span>
+      <span id='openlayers-switcher-block--community-toilets'></span>
+      <span id='openlayers-switcher-block--food-growing-projects'></span>
+      <span id='openlayers-switcher-block--libraries'></span>
+      <span id='openlayers-switcher-block--recycling'></span>
+      <span id='openlayers-switcher-block--primary-schools'></span>
+      <span id='openlayers-switcher-block--secondary-schools'></span>
+      <span id='openlayers-switcher-block--nursery-schools'></span>
+      <span id='openlayers-switcher-block--special-schools'></span>
+    </div>";
+}
+

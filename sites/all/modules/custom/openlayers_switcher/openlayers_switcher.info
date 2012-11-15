@@ -1,0 +1,4 @@
+name = "openlayers_switcher"
+description = "A set of images for switching map data layers on and off."
+core = "7.x"
+package = "Custom"
