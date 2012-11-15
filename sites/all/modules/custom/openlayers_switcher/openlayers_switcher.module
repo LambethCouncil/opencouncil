@@ -41,19 +41,19 @@ function openlayers_switcher_block_view($delta = '') {
 function _openlayers_switcher_content() {
   $images_dir = drupal_get_path('theme', 'opencouncil') . '/images/';
   return "<div id='map-switcher-block'>
-      <a id='openlayers-switcher-block--adventure-playgrounds' class=''></a>
-      <a id='openlayers-switcher-block--car-parks' class=''></a>
-      <a id='openlayers-switcher-block--childrens-centres' class=''></a>
-      <a id='openlayers-switcher-block--cycle-stands' class=''></a>
-      <a id='openlayers-switcher-block--police-stations' class=''></a>
-      <a id='openlayers-switcher-block--community-toilets' class=''></a>
-      <a id='openlayers-switcher-block--food-growing-projects' class=''></a>
-      <a id='openlayers-switcher-block--libraries' class=''></a>
-      <a id='openlayers-switcher-block--recycling' class=''></a>
-      <a id='openlayers-switcher-block--primary-schools' class=''></a>
-      <a id='openlayers-switcher-block--secondary-schools' class=''></a>
-      <a id='openlayers-switcher-block--nursery-schools' class=''></a>
-      <a id='openlayers-switcher-block--special-schools' class=''></a>
+      <a id='openlayers-switcher-block--adventure-playgrounds'></a>
+      <a id='openlayers-switcher-block--car-parks'></a>
+      <a id='openlayers-switcher-block--childrens-centres'></a>
+      <a id='openlayers-switcher-block--cycle-stands'></a>
+      <a id='openlayers-switcher-block--police-stations'></a>
+      <a id='openlayers-switcher-block--community-toilets'></a>
+      <a id='openlayers-switcher-block--food-growing-projects'></a>
+      <a id='openlayers-switcher-block--libraries'></a>
+      <a id='openlayers-switcher-block--recycling'></a>
+      <a id='openlayers-switcher-block--primary-schools'></a>
+      <a id='openlayers-switcher-block--secondary-schools'></a>
+      <a id='openlayers-switcher-block--nursery-schools'></a>
+      <a id='openlayers-switcher-block--special-schools'></a>
     </div>";
 }
 
