@@ -4,7 +4,7 @@
  */
 function openlayers_switcher_block_info() {
   $blocks['openlayers-switcher-block'] = array(
-    'info' => t('Map switcher block'),
+    'info' => t('openlayers-switcher-block'),
   );
   return $blocks;
 }
