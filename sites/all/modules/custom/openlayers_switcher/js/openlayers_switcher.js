@@ -6,7 +6,7 @@
           e.stopPropagation();
           var layername = 'food-growing-projects';
           var ol = $('.openlayers-map').data('openlayers');
-          var layers = ol.openlayers.layers;
+          var layers = ol.openlayers.getLayersByName(layername);
           for (var i = 0; i < layers.length; ++i) {
             if (layers[i].name = layername) {
               break;
