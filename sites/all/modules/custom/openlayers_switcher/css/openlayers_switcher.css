@@ -1,11 +1,19 @@
-#block-openlayers-switcher-openlayers-switcher-block #map-swicher-block span {
+#map-switcher-block {
+	margin-top: 10px;
+}
+
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block span {
 	background-repeat: no-repeat;
 	display: block;
 	float: left;
 	height: 85px;
 	width: 85px;
 	text-indent: -9999px;
-	padding-right: 10px;
+	padding: 5px;
+}
+
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block span:hover {
+	opacity: 0.9;
 }
 
 #openlayers-switcher-block--cycle-stands {
