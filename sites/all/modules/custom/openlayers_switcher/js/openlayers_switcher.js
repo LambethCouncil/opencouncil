@@ -6,7 +6,8 @@
           e.stopPropagation();
           var layername = 'food-growing-projects';
           var ol = $('.openlayers-map').data('openlayers');
-          var layers = ol.openlayers.getLayersByName(layername);
+          // var layers = ol.openlayers.getLayersByName(layername);
+          ol.openlayers.getLayersByName(layername).setVisibility();
           for (var i = 0; i < layers.length; ++i) {
             alert(layers[i].name);
           }
