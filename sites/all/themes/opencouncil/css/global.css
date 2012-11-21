@@ -47,10 +47,10 @@ header#section-header {
     top:0;
 }
 
-/* on mobile allow a little space to left of map */
+/* on mobile allow a little space to left of map - instead let's decrease the height of the map and maybe leave some padding to left of just the map
 #zone-content {
   padding-left: 20px;
-}
+}/*
 
 /* Main menu */
 #zone-menu {
