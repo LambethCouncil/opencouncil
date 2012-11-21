@@ -1,3 +1,7 @@
+/* @override 
+	http://localhost:8888/lambeth/sites/all/themes/opencouncil/css/global.css?mdjdx9
+	http://localhost:8888/lambeth/sites/all/themes/opencouncil/css/global.css?mdu5ka */
+
 /* This file will hold styles for the mobile version of your website (mobile first). */
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
 
@@ -204,3 +208,222 @@ float:left;
 width: 300px;
 }
 
+#map-center-locations {
+	padding: 5px 0;
+}
+
+#map-switcher-block {
+	margin-top: 10px;
+}
+
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block a {
+	background-repeat: no-repeat;
+	background-position: left 0px;
+	display: block;
+	float: left;
+	height: 35px;
+	width: 32%;
+	font-size: 0.6em;
+	text-indent: 0;
+	text-align: right;
+	color: #FFF;
+	font-weight: normal;
+	line-height: 1.1;
+	text-transform: lowercase;
+	position: relative;
+	padding: 0px;
+	margin: 1px;
+	border: 1px solid #FFF;
+	cursor: pointer;
+	-moz-transition: all 0.3s ease-in;
+	    -webkit-transition: all 0.3s ease-in;
+	    -o-transition: all 0.3s ease-in;
+	    transition: all 0.3s ease-in;
+}
+
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block span {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	width: 60%;
+	/*
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+	width: 60%;
+	text-align: center;
+	width: 70px;
+	margin-left: -35px;
+	left: 50%;
+	line-height: 0.9;
+	*/
+}
+
+#map-switcher-block a:hover {
+	background-color: #FFF;
+	border-color: #666;
+	-moz-transition: all 0.3s ease-in;
+	    -webkit-transition: all 0.3s ease-in;
+	    -o-transition: all 0.3s ease-in;
+	    transition: all 0.3s ease-in;
+}
+
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--cycle-stands {
+  background-image: url(../images/cycle-stands-off-40x40.png);
+  color: #C21432;
+  border-color: #C21432;
+}
+
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--cycle-stands:hover {
+  background-image: url(../images/cycle-stands-on-40x40.png);
+  background-color: #C21432;
+  color: #FFF;
+}
+
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--car-parks {
+  background-image: url(../images/parking-off-40x40.png);
+  color: #334E79;
+  border-color: #334E79;
+}
+
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--car-parks:hover {
+  background-image: url(../images/parking-on-40x40.png);
+  background-color: #334E79;
+  color: #FFF;
+}
+
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--adventure-playgrounds {
+  background-image: url(../images/adventure-playgrounds-off-40x40.png);
+  color: #C21432;
+  border-color: #C21432;
+}
+
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--adventure-playgrounds:hover {
+  background-image: url(../images/adventure-playgrounds-on-40x40.png);
+  background-color: #C21432;
+  color: #FFF;
+}
+
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--childrens-centres {
+  background-image: url(../images/childrens-centres-off-40x40.png);
+  border-color: #E43456;
+  color: #E43456;
+}
+
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--childrens-centres:hover {
+  background-image: url(../images/childrens-centres-on-40x40.png);
+  background-color: #E43456;
+  color: #FFF;
+}
+
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--police-stations {
+  background-image: url(../images/police-stations-off-40x40.png);
+  border-color: #363638;
+  color: #363638;
+}
+
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--police-stations:hover {
+  background-image: url(../images/police-stations-on-40x40.png);
+  background-color: #363638;
+  color: #FFF;
+}
+
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--community-toilets {
+  background-image: url(../images/community-toilets-off-40x40.png);
+  border-color: #6B6B77;
+  color: #6B6B77;
+}
+
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--community-toilets:hover {
+  background-image: url(../images/community-toilets-on-40x40.png);
+  background-color: #6B6B77;
+  color: #FFF;
+}
+
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--food-growing-projects {
+  background-image: url(../images/food-growing-projects-off-40x40.png);
+  border-color: #6BA237;
+  color: #6BA237;
+}
+
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--food-growing-projects:hover {
+  background-image: url(../images/food-growing-projects-on-40x40.png);
+  background-color: #6BA237;
+  color: #FFF;
+}
+
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--libraries {
+  background-image: url(../images/libraries-off-40x40.png);
+  border-color: #F39C00;
+  color: #F39C00;
+}
+
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--libraries:hover {
+  background-image: url(../images/libraries-on-40x40.png);
+  background-color: #F39C00;
+  color: #FFF;
+}
+
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--recycling {
+  background-image: url(../images/recycling-off-40x40.png);
+  border-color: #476728;
+  color: #476728;
+}
+
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--recycling:hover {
+  background-image: url(../images/recycling-on-40x40.png);
+  background-color: #476728;
+  color: #FFF;
+}
+
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--primary-schools {
+  background-image: url(../images/primary-schools-off-40x40.png);
+  border-color: #F8532A;
+  color: #F8532A;
+}
+
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--primary-schools:hover {
+  background-image: url(../images/primary-schools-on-40x40.png);
+  background-color: #F8532A;
+  color: #FFF;
+}
+
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--secondary-schools {
+  background-image: url(../images/secondary-schools-off-40x40.png);
+  border-color: #7F2737;
+  color: #7F2737;
+}
+
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--secondary-schools:hover {
+  background-image: url(../images/secondary-schools-on-40x40.png);
+  background-color: #7F2737;
+  color: #FFF;
+}
+
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--nursery-schools {
+  background-image: url(../images/nursery-schools-off-40x40.png);
+  border-color: #B36473;
+  color: #B36473;
+}
+
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--nursery-schools:hover {
+  background-image: url(../images/nursery-schools-on-40x40.png);
+  background-color: #B36473;
+  color: #FFF;
+}
+
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--special-schools {
+  background-image: url(../images/special-schools-off-40x40.png);
+  border-color: #B36473;
+  color: #B36473;
+}
+
+#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--special-schools {
+  background-image: url(../images/special-schools-on-40x40.png);
+  background-color: #B36473;
+  color: #FFF;
+}
+
+#block-map-center-map-center-block input[type="text"] {
+	max-width: 80%;
+}
