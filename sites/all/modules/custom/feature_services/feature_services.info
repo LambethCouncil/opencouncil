@@ -1,0 +1,11 @@
+name = feature_services
+core = 7.x
+package = Features
+dependencies[] = ctools
+dependencies[] = services
+dependencies[] = views
+features[ctools][] = services:services:3
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:1
+features[services_endpoint][] = rest
+features[views_view][] = points_of_interest_services
