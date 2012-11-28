@@ -63,19 +63,19 @@ function openlayers_switcher_block_view($delta = '') {
 function _openlayers_switcher_content() {
   $images_dir = drupal_get_path('theme', 'opencouncil') . '/images/';
   return "<div id='map-switcher-block'>
-      <a id='openlayers-switcher-block--adventure-playgrounds'></a>
-      <a id='openlayers-switcher-block--car-parks'></a>
-      <a id='openlayers-switcher-block--childrens-centres'></a>
-      <!-- <a id='openlayers-switcher-block--cycle-stands'></a> -->
-      <a id='openlayers-switcher-block--police-stations'></a>
-      <a id='openlayers-switcher-block--community-toilets'></a>
-      <a id='openlayers-switcher-block--food-growing-projects'></a>
-      <a id='openlayers-switcher-block--libraries'></a>
-      <a id='openlayers-switcher-block--recycling'></a>
-      <a id='openlayers-switcher-block--primary-schools'></a>
-      <a id='openlayers-switcher-block--secondary-schools'></a>
-      <a id='openlayers-switcher-block--nursery-schools'></a>
-      <a id='openlayers-switcher-block--special-schools'></a>
+      <a id='openlayers-switcher-block--car-parks'><span>Car Parks</span></a>
+      <a id='openlayers-switcher-block--childrens-centres'><span>Children's Centres</span></a>
+      <a id='openlayers-switcher-block--cycle-stands'><span>Cycle Stands</span></a>
+      <a id='openlayers-switcher-block--police-stations'><span>Police Stations</span></a>
+      <a id='openlayers-switcher-block--community-toilets'><span>Community Toilets</span></a>
+      <a id='openlayers-switcher-block--food-growing-projects'><span>Food Growing Projects</span></a>
+      <a id='openlayers-switcher-block--libraries'><span>Libraries</span></a>
+      <a id='openlayers-switcher-block--recycling'><span>Recycling</span></a>
+      <a id='openlayers-switcher-block--primary-schools'><span>Primary Schools</span></a>
+      <a id='openlayers-switcher-block--secondary-schools'><span>Secondary Schools</span></a>
+      <a id='openlayers-switcher-block--nursery-schools'><span>Nursery Schools</span></a>
+      <a id='openlayers-switcher-block--special-schools'><span>Special Schools</span></a>
+      <a id='openlayers-switcher-block--adventure-playgrounds'><span>Adventure Playgrounds</span></a>
     </div>";
 }
 

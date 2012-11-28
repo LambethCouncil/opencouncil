@@ -31,7 +31,7 @@ function _map_center_content() {
       <input type='text' id='map_center_text' size=80 autofocus placeholder='Enter a location or a postcode. Examples: Herne Hill, Acre Lane, SW2 1RW'>
       <button id='map_center_button'>Go</button>
     </div>
-    <div>
+    <div id='map-center-locations'>
       <button id='map_center_brixton'>Brixton</button>
       <button id='map_center_clapham'>Clapham</button>
       <button id='map_center_gipsy-hill'>Gipsy Hill</button>
