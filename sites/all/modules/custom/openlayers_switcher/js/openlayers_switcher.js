@@ -2,22 +2,12 @@
   Drupal.behaviors.openlayers_switcher = {
     attach: function(context, settings) {
       $(document).ready(function() {
-        $('[id^=openlayers-switcher-block--]').click(function(e) {
-          $(this).toggleClass('active');
-          // 27 is the length of 'openlayers-switcher-block--'
-          // layername is the string following that.
-          var layername = e.target.id.substring(27);
-          var ol = $('.openlayers-map').data('openlayers');
-          var layers = ol.openlayers.getLayersByName(layername);
-          layers[0].setVisibility(true);
-          // this doesn't work
-          // if (layers[0].visibility) {
-            // layers[0].setVisibility(false);
-          // }
-          // else {
-            // layers[0].setVisibility(true);
-          // }
-        });
+        // http://stackoverflow.com/questions/1279957/how-to-move-an-element-into-another-element
+        // This uses jQuery to move the layer switcher checkboxes from the lhs
+        // switcher block to below the map.
+        if ($('.layersDiv .dataLayersDiv').length) {
+          $('.layersDiv .dataLayersDiv').appendTo('#openlayers-switcher-block');
+        }
       });
     }
   }

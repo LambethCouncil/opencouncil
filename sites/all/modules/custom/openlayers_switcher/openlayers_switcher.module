@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Implementation of hook_block_info().
  */
@@ -14,6 +15,7 @@ function openlayers_switcher_block_info() {
  */
 function openlayers_switcher_block_view($delta = '') {
   // http://www.jaypan.com/tutorial/adding-css-and-js-cached-block-drupal-7
+  $block = array();
   switch ($delta) {
     case 'openlayers-switcher-block':
       $block = array(
@@ -40,7 +42,9 @@ function openlayers_switcher_block_view($delta = '') {
  */
 function _openlayers_switcher_content() {
   $images_dir = drupal_get_path('theme', 'opencouncil') . '/images/';
-  return "<div id='map-switcher-block'>
+  return "<div id='openlayers-switcher-block'></div>";
+  /*
+  return "<div id='openlayers-switcher-block'>
       <a id='openlayers-switcher-block--car-parks'><span>Car Parks</span></a>
       <a id='openlayers-switcher-block--childrens-centres'><span>Children's Centres</span></a>
       <a id='openlayers-switcher-block--cycle-stands'><span>Cycle Stands</span></a>
@@ -54,6 +58,7 @@ function _openlayers_switcher_content() {
       <a id='openlayers-switcher-block--nursery-schools'><span>Nursery Schools</span></a>
       <a id='openlayers-switcher-block--special-schools'><span>Special Schools</span></a>
       <a id='openlayers-switcher-block--adventure-playgrounds'><span>Adventure Playgrounds</span></a>
-    </div>";
+      </div>";
+   */
 }
 
