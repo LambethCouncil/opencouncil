@@ -8,7 +8,7 @@
 /* Typography & font colours*/
 body {
      font-family:helvetica, arial, sans-serif;
-     font-size:110%;
+     font-size:87.5%;
 }
 h1,h2,h3,h4,h5 {
     font-family:helvetica, arial, sans-serif;
@@ -32,7 +32,8 @@ h1.title {
 #section-content {
     padding-top:6em;
 }
-header#section-header {
+
+#section-header {
     position:fixed;
     background:#333;
     width:100%;
@@ -47,19 +48,24 @@ header#section-header {
     top:0;
 }
 
-/* on mobile allow a little space to left of map - instead let's decrease the height of the map and maybe leave some padding to left of just the map
-#zone-content {
-  padding-left: 20px;
-}/*
+.view-points-of-interest .openlayers-container, .openlayers-map {
+	height: 200px!important;
+}
+
+.olControlPanZoomBar {
+	display: none;
+}
 
 /* Main menu */
 #zone-menu {
     background:#383838;
     font-size:0.8em;
 }
+
 #region-menu {
     background:#795582;
 }
+
 #zone-menu a {
     color:#fff;
 }
@@ -144,7 +150,7 @@ header#section-header {
 }
 
 /* Footer */
-footer#section-footer {
+#section-footer {
     background:#ddd;
     min-height:8em;
     border-top:solid 1px #808080;
@@ -204,7 +210,6 @@ width: 300px;
 {
 clear:left;
 float:left;
-
 width: 300px;
 }
 
@@ -216,41 +221,26 @@ width: 300px;
 	margin-top: 10px;
 }
 
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block a {
-	background-repeat: no-repeat;
-	background-position: left 0px;
+#map-switcher-block a {
 	display: block;
 	float: left;
 	height: 35px;
 	width: 32%;
-	font-size: 0.6em;
-	text-indent: 0;
-	text-align: right;
-	color: #444;
-	font-weight: normal;
-	line-height: 1.1;
-	text-transform: lowercase;
 	position: relative;
-	padding: 0px;
+	padding: 0;
 	margin: 1px;
 	border: 1px solid #FFF;
 	cursor: pointer;
+	color: #444;
+	overflow: hidden;
 	-moz-transition: all 0.3s ease-in;
-	    -webkit-transition: all 0.3s ease-in;
-	    -o-transition: all 0.3s ease-in;
-	    transition: all 0.3s ease-in;
+	-webkit-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;
+	text-decoration: none;
 }
 
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block span {
-	position: absolute;
-	right: 5px;
-	top: 5px;
-	width: 60%;
-}
-
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block a:hover {
-	background-color: #FFF;
-	border-color: #666;
+#map-switcher-block a:hover {
 	-moz-transition: all 0.3s ease-in;
 	    -webkit-transition: all 0.3s ease-in;
 	    -o-transition: all 0.3s ease-in;
@@ -258,135 +248,290 @@ width: 300px;
 	    color: #FFF;
 }
 
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--cycle-stands {
-  background-image: url(../images/cycle-stands-off-40x40.png);
-  border-color: #C21432;
+.switcher-text {
+	text-align: right;
+	font-size: 0.8em;
+	line-height: 1.2;
+	font-weight: normal;
+	text-transform: lowercase;
+	width: 60%;
+	float: right;
 }
 
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--cycle-stands:hover {
-  background-image: url(../images/cycle-stands-on-40x40.png);
-  background-color: #C21432;
+.icon-switcher {
+	text-align: left;
+	background-repeat: no-repeat;
+	height: 40px;
+	width: 40px;
+	background-image: url(../images/switcher-icons-40x40.png);
+	position: absolute;
+	top: 0;
+	left: 5px;
 }
 
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--car-parks {
-  background-image: url(../images/parking-off-40x40.png);
+/* @group Icons */
+
+/* @group Car Parks */
+
+#map-switcher-block #openlayers-switcher-block--car-parks {
   border-color: #334E79;
 }
 
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--car-parks:hover {
-  background-image: url(../images/parking-on-40x40.png);
+#map-switcher-block #openlayers-switcher-block--car-parks:hover {
   background-color: #334E79;
  }
+ 
+#openlayers-switcher-block--car-parks .icon-switcher {
+   background-position: 0px 0px;
+ }
+ 
+ #openlayers-switcher-block--car-parks:hover .icon-switcher {
+    background-position: 0px -40px;
+  }
 
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--adventure-playgrounds {
-  background-image: url(../images/adventure-playgrounds-off-40x40.png);
-  border-color: #C21432;
-}
+/* @end */
+/* @group Children's Centres */
 
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--adventure-playgrounds:hover {
-  background-image: url(../images/adventure-playgrounds-on-40x40.png);
-  background-color: #C21432;
-}
-
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--childrens-centres {
-  background-image: url(../images/childrens-centres-off-40x40.png);
+#map-switcher-block #openlayers-switcher-block--childrens-centres {
   border-color: #E43456;
 }
 
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--childrens-centres:hover {
-  background-image: url(../images/childrens-centres-on-40x40.png);
+ #map-switcher-block #openlayers-switcher-block--childrens-centres:hover {
   background-color: #E43456;
+  background-position: -40px -40px;
 }
 
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--police-stations {
-  background-image: url(../images/police-stations-off-40x40.png);
+#openlayers-switcher-block--childrens-centres .icon-switcher {
+  background-position: -40px 0px;
+}
+
+#openlayers-switcher-block--childrens-centres:hover .icon-switcher {
+  background-position: -40px -40px;
+}
+
+/* @end */
+
+/* @group Cycle Stands */
+
+#map-switcher-block #openlayers-switcher-block--cycle-stands {
+  border-color: #8F6A8E;
+}
+
+#map-switcher-block #openlayers-switcher-block--cycle-stands:hover {
+  background-color: #8F6A8E;
+}
+
+#openlayers-switcher-block--cycle-stands .icon-switcher {
+  background-position: -80px 0px;
+}
+
+#openlayers-switcher-block--cycle-stands:hover .icon-switcher {
+  background-position: -80px -40px;
+}
+
+/* @end */
+
+/* @group Police Stations */
+
+#map-switcher-block #openlayers-switcher-block--police-stations {
   border-color: #363638;
 }
 
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--police-stations:hover {
-  background-image: url(../images/police-stations-on-40x40.png);
+ #map-switcher-block #openlayers-switcher-block--police-stations:hover {
   background-color: #363638;
 }
 
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--community-toilets {
-  background-image: url(../images/community-toilets-off-40x40.png);
+#openlayers-switcher-block--police-stations .icon-switcher {
+  background-position: -120px 0px;
+}
+
+#openlayers-switcher-block--police-stations:hover .icon-switcher {
+  background-position: -120px -40px;
+}
+
+/* @end */
+
+/* @group Toilets */
+
+#map-switcher-block #openlayers-switcher-block--community-toilets {
   border-color: #6B6B77;
 }
 
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--community-toilets:hover {
-  background-image: url(../images/community-toilets-on-40x40.png);
+ #map-switcher-block #openlayers-switcher-block--community-toilets:hover {
   background-color: #6B6B77;
 }
 
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--food-growing-projects {
-  background-image: url(../images/food-growing-projects-off-40x40.png);
+#openlayers-switcher-block--community-toilets .icon-switcher {
+  background-position: -160px 0px;
+}
+
+#openlayers-switcher-block--community-toilets:hover .icon-switcher {
+  background-position: -160px -40px;
+}
+
+/* @end */
+
+/* @group Food Growing */
+
+#map-switcher-block #openlayers-switcher-block--food-growing-projects {
   border-color: #6BA237;
 }
 
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--food-growing-projects:hover {
-  background-image: url(../images/food-growing-projects-on-40x40.png);
+ #map-switcher-block #openlayers-switcher-block--food-growing-projects:hover {
   background-color: #6BA237;
 }
 
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--libraries {
-  background-image: url(../images/libraries-off-40x40.png);
-  border-color: #F39C00;
+#openlayers-switcher-block--food-growing-projects .icon-switcher {
+  background-position: -200px 0px;
 }
 
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--libraries:hover {
-  background-image: url(../images/libraries-on-40x40.png);
+#openlayers-switcher-block--food-growing-projects:hover .icon-switcher {
+  background-position: -200px -40px;
+}
+
+/* @end */
+
+/* @group Libraries */
+
+#map-switcher-block #openlayers-switcher-block--libraries {
+   border-color: #F39C00;
+}
+
+ #map-switcher-block #openlayers-switcher-block--libraries:hover {
   background-color: #F39C00;
 }
 
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--recycling {
-  background-image: url(../images/recycling-off-40x40.png);
+#map-switcher-block #openlayers-switcher-block--libraries .icon-switcher {
+  background-position: -240px 0px;
+}
+
+#map-switcher-block #openlayers-switcher-block--libraries:hover .icon-switcher {
+  background-position: -240px -40px;
+}
+
+/* @end */
+
+/* @group Recycling */
+
+#map-switcher-block #openlayers-switcher-block--recycling {
   border-color: #476728;
 }
 
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--recycling:hover {
-  background-image: url(../images/recycling-on-40x40.png);
+ #map-switcher-block #openlayers-switcher-block--recycling:hover {
   background-color: #476728;
 }
 
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--primary-schools {
-  background-image: url(../images/primary-schools-off-40x40.png);
+#openlayers-switcher-block--recycling .icon-switcher {
+  background-position: -280px 0px;
+}
+
+#openlayers-switcher-block--recycling:hover .icon-switcher {
+  background-position: -280px -40px;
+}
+
+/* @end */
+
+/* @group Primary Schools */
+
+#map-switcher-block #openlayers-switcher-block--primary-schools {
   border-color: #F8532A;
 }
 
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--primary-schools:hover {
-  background-image: url(../images/primary-schools-on-40x40.png);
+ #map-switcher-block #openlayers-switcher-block--primary-schools:hover {
   background-color: #F8532A;
 }
 
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--secondary-schools {
-  background-image: url(../images/secondary-schools-off-40x40.png);
+#openlayers-switcher-block--primary-schools .icon-switcher {
+  background-position: -320px 0px;
+}
+
+#openlayers-switcher-block--primary-schools:hover .icon-switcher {
+  background-position: -320px -40px;
+}
+
+/* @end */
+
+/* @group Secondary Schools */
+
+#map-switcher-block #openlayers-switcher-block--secondary-schools {
   border-color: #7F2737;
 }
 
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--secondary-schools:hover {
-  background-image: url(../images/secondary-schools-on-40x40.png);
+ #map-switcher-block #openlayers-switcher-block--secondary-schools:hover {
   background-color: #7F2737;
 }
 
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--nursery-schools {
-  background-image: url(../images/nursery-schools-off-40x40.png);
+#openlayers-switcher-block--secondary-schools .icon-switcher {
+  background-position: -360px 0px;
+}
+
+#openlayers-switcher-block--secondary-schools:hover .icon-switcher {
+  background-position: -360px -40px;
+}
+
+/* @end */
+
+/* @group Nursery Schools */
+
+#map-switcher-block #openlayers-switcher-block--nursery-schools {
   border-color: #B36473;
 }
 
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--nursery-schools:hover {
-  background-image: url(../images/nursery-schools-on-40x40.png);
+ #map-switcher-block #openlayers-switcher-block--nursery-schools:hover {
   background-color: #B36473;
 }
 
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--special-schools {
-  background-image: url(../images/special-schools-off-40x40.png);
+#openlayers-switcher-block--nursery-schools .icon-switcher {
+  background-position: -400px 0px;
+}
+
+#openlayers-switcher-block--nursery-schools:hover .icon-switcher {
+  background-position: -400px -40px;
+}
+
+/* @end */
+
+/* @group Special Schools */
+
+#map-switcher-block #openlayers-switcher-block--special-schools {
   border-color: #B36473;
 }
 
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block #openlayers-switcher-block--special-schools:hover {
-  background-image: url(../images/special-schools-on-40x40.png);
+ #map-switcher-block #openlayers-switcher-block--special-schools:hover {
   background-color: #B36473;
 }
+
+#openlayers-switcher-block--special-schools .icon-switcher {
+  background-position: -440px 0px;
+}
+
+#openlayers-switcher-block--special-schools:hover .icon-switcher {
+  background-position: -440px -40px;
+}
+
+/* @end */
+
+/* @group Playgrounds */
+
+#map-switcher-block #openlayers-switcher-block--adventure-playgrounds {
+   border-color: #C21432;
+ }
+
+#map-switcher-block #openlayers-switcher-block--adventure-playgrounds:hover {
+  background-color: #C21432;
+}
+
+#openlayers-switcher-block--adventure-playgrounds .icon-switcher {
+  background-position: -480px 0px;
+}
+
+#openlayers-switcher-block--adventure-playgrounds:hover .icon-switcher {
+  background-position: -480px -40px;
+}
+
+/* @end */
+
+/* @end */
 
 #block-map-center-map-center-block input[type="text"] {
 	max-width: 80%;

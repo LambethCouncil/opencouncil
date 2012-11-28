@@ -3,27 +3,36 @@
  *  apply to the normal and widescreen layouts. You may override these styles in the normal 
  *  and widescreen CSS files as appropriate. */
  
- #block-openlayers-switcher-openlayers-switcher-block #map-switcher-block a {
-  	background-position: center 10px;
-  	height: 85px;
+ #map-switcher-block a {
+   	height: 85px;
  	width: 85px;
- 	font-size: 0.6em;
- 	text-indent: 0;
- 	line-height: 1.1;
- 	margin: 5px;
+  	margin: 5px;
  	border-radius: 5px;
  	-webkit-border-radius: 5px;
  	-moz-border-radius: 5px;
  	border: 2px solid #FFF;
+ 	text-align: center;
+ }
+  
+ .switcher-text {
+ 	text-align: center;
+ 	margin-top: 50px;
+ 	width: 90%;
+ 	float: none;
+ 	display: inline-block;
  }
  
- #block-openlayers-switcher-openlayers-switcher-block #map-switcher-block span {
+ .icon-switcher {
  	position: absolute;
- 	top: auto;
- 	right: auto;
- 	bottom: 10px;
- 	left: 50%;
- 	width: 64px;
- 	margin-left: -32px;
- 	text-align: center;
+ 	top: 7px;
+ 	left: 20px;
+ }
+ 
+  /* Set map back to 400px */
+ .view-points-of-interest .openlayers-container, .openlayers-map {
+ 	height: 400px!important;
+ }
+ 
+ .olControlPanZoomBar {
+ 	display: block;
  }
