@@ -15,6 +15,7 @@ function openlayers_switcher_block_info() {
  */
 function openlayers_switcher_block_view($delta = '') {
   // http://www.jaypan.com/tutorial/adding-css-and-js-cached-block-drupal-7
+  $block = array();
   switch ($delta) {
     case 'openlayers-switcher-block':
       $block = array(
