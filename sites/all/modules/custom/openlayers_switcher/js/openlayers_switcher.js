@@ -7,7 +7,6 @@
         // switcher block to below the map.
         if ($('.layersDiv .dataLayersDiv').length) {
           $('.layersDiv .dataLayersDiv').appendTo('#openlayers-switcher-block');
-          $('.layersDiv .dataLbl').hide();
         }
       });
     }
