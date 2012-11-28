@@ -1,38 +1,22 @@
 <?php
-/**
- * Implementation of hook_openlayers_behaviors()
- *
- * See: sites/all/modules/openlayers/docs/BEHAVIORS.txt
- */
-function openlayers_switcher_openlayers_behaviors() {
-  return array(
-    'openlayers_behavior_openlayers_switcher' => array(
-      'title' => t('openlayers_switcher'),
-      'description' => t('Use images provided by the openlayers_switcher module'),
-      'type' => 'layer',
-      'path' => drupal_get_path('module', 'openlayers_switcher')
-        .'/includes/behaviors',
-      'file' => 'openlayers_behavior_openlayers_switcher.inc',
-      'behavior' => array(
-        'class' => 'openlayers_behavior_openlayers_switcher',
-        'parent' => 'openlayers_behavior',
-      ),
-    ),
-  );
-}
 
 /**
  * Implementation of hook_block_info().
+ */
 function openlayers_switcher_block_info() {
   $blocks['openlayers-switcher-block'] = array(
     'info' => t('openlayers-switcher-block'),
   );
+  // TEST
+  $blocks['openlayers-switcher-block-lhs'] = array(
+    'info' => t('openlayers-switcher-block-lhs'),
+  );
   return $blocks;
 }
- */
 
 /**
  * Implementation of hook_block_view().
+ */
 function openlayers_switcher_block_view($delta = '') {
   // http://www.jaypan.com/tutorial/adding-css-and-js-cached-block-drupal-7
   switch ($delta) {
@@ -51,10 +35,21 @@ function openlayers_switcher_block_view($delta = '') {
         ),
       );
       break;
+    case 'openlayers-switcher-block-lhs':
+      $block = array(
+        'content' => array(
+          '#markup' => _openlayers_switcher_content_lhs(),
+          '#attached' => array(
+            'js' => array(
+              drupal_get_path('module', 'openlayers_switcher') . '/js/openlayers_switcher.js',
+            ),
+          ),
+        ),
+      );
+      break;
   }
   return $block;
 }
- */
 
 /**
  * custom html block
@@ -62,7 +57,7 @@ function openlayers_switcher_block_view($delta = '') {
  */
 function _openlayers_switcher_content() {
   $images_dir = drupal_get_path('theme', 'opencouncil') . '/images/';
-  return "<div id='map-switcher-block'>
+  return "<div id='openlayers-switcher-block'>
       <a id='openlayers-switcher-block--car-parks'><span>Car Parks</span></a>
       <a id='openlayers-switcher-block--childrens-centres'><span>Children's Centres</span></a>
       <a id='openlayers-switcher-block--cycle-stands'><span>Cycle Stands</span></a>
@@ -79,3 +74,6 @@ function _openlayers_switcher_content() {
     </div>";
 }
 
+function _openlayers_switcher_content_lhs() {
+  return "<div id='openlayers-switcher-block-lhs'></div>";
+}
