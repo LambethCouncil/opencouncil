@@ -7,10 +7,6 @@ function openlayers_switcher_block_info() {
   $blocks['openlayers-switcher-block'] = array(
     'info' => t('openlayers-switcher-block'),
   );
-  // TEST
-  $blocks['openlayers-switcher-block-lhs'] = array(
-    'info' => t('openlayers-switcher-block-lhs'),
-  );
   return $blocks;
 }
 
@@ -30,18 +26,6 @@ function openlayers_switcher_block_view($delta = '') {
             ),
             'css' => array(
               drupal_get_path('module', 'openlayers_switcher') . '/css/openlayers_switcher.css',
-            ),
-          ),
-        ),
-      );
-      break;
-    case 'openlayers-switcher-block-lhs':
-      $block = array(
-        'content' => array(
-          '#markup' => _openlayers_switcher_content_lhs(),
-          '#attached' => array(
-            'js' => array(
-              drupal_get_path('module', 'openlayers_switcher') . '/js/openlayers_switcher.js',
             ),
           ),
         ),
@@ -74,6 +58,3 @@ function _openlayers_switcher_content() {
     </div>";
 }
 
-function _openlayers_switcher_content_lhs() {
-  return "<div id='openlayers-switcher-block-lhs'></div>";
-}
