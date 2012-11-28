@@ -1,17 +1,38 @@
 <?php
 /**
- * Implementation of hook_block_info().
+ * Implementation of hook_openlayers_behaviors()
+ *
+ * See: sites/all/modules/openlayers/docs/BEHAVIORS.txt
  */
+function openlayers_switcher_openlayers_behaviors() {
+  return array(
+    'openlayers_behavior_openlayers_switcher' => array(
+      'title' => t('openlayers_switcher'),
+      'description' => t('Use images provided by the openlayers_switcher module'),
+      'type' => 'layer',
+      'path' => drupal_get_path('module', 'openlayers_switcher')
+        .'/includes/behaviors',
+      'file' => 'openlayers_behavior_openlayers_switcher.inc',
+      'behavior' => array(
+        'class' => 'openlayers_behavior_openlayers_switcher',
+        'parent' => 'openlayers_behavior',
+      ),
+    ),
+  );
+}
+
+/**
+ * Implementation of hook_block_info().
 function openlayers_switcher_block_info() {
   $blocks['openlayers-switcher-block'] = array(
     'info' => t('openlayers-switcher-block'),
   );
   return $blocks;
 }
+ */
 
 /**
  * Implementation of hook_block_view().
- */
 function openlayers_switcher_block_view($delta = '') {
   // http://www.jaypan.com/tutorial/adding-css-and-js-cached-block-drupal-7
   switch ($delta) {
@@ -33,6 +54,7 @@ function openlayers_switcher_block_view($delta = '') {
   }
   return $block;
 }
+ */
 
 /**
  * custom html block
