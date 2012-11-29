@@ -217,11 +217,11 @@ width: 300px;
 	padding: 5px 0;
 }
 
-#openlayers-switcher-block {
+.openlayers-switcher-block {
 	margin-top: 10px;
 }
 
-#openlayers-switcher-block a {
+.openlayers-switcher-block a {
 	display: block;
 	float: left;
 	height: 35px;
@@ -240,7 +240,7 @@ width: 300px;
 	text-decoration: none;
 }
 
-#openlayers-switcher-block a:hover {
+.openlayers-switcher-block a:hover {
 	-moz-transition: all 0.3s ease-in;
 	    -webkit-transition: all 0.3s ease-in;
 	    -o-transition: all 0.3s ease-in;
@@ -273,39 +273,39 @@ width: 300px;
 
 /* @group Car Parks */
 
-#openlayers-switcher-block #openlayers-switcher-block--car-parks {
+#openlayers-switcher-block .openlayers-switcher-block--car-parks {
   border-color: #334E79;
 }
 
-#openlayers-switcher-block #openlayers-switcher-block--car-parks:hover {
+#openlayers-switcher-block .openlayers-switcher-block--car-parks:hover {
   background-color: #334E79;
  }
  
-#openlayers-switcher-block--car-parks .icon-switcher {
+.openlayers-switcher-block--car-parks .icon-switcher {
    background-position: 0px 0px;
  }
  
- #openlayers-switcher-block--car-parks:hover .icon-switcher {
+ .openlayers-switcher-block--car-parks:hover .icon-switcher {
     background-position: 0px -40px;
   }
 
 /* @end */
 /* @group Children's Centres */
 
-#openlayers-switcher-block #openlayers-switcher-block--childrens-centres {
+#openlayers-switcher-block .openlayers-switcher-block--childrens-centres {
   border-color: #E43456;
 }
 
- #openlayers-switcher-block #openlayers-switcher-block--childrens-centres:hover {
+ #openlayers-switcher-block .openlayers-switcher-block--childrens-centres:hover {
   background-color: #E43456;
   background-position: -40px -40px;
 }
 
-#openlayers-switcher-block--childrens-centres .icon-switcher {
+.openlayers-switcher-block--childrens-centres .icon-switcher {
   background-position: -40px 0px;
 }
 
-#openlayers-switcher-block--childrens-centres:hover .icon-switcher {
+.openlayers-switcher-block--childrens-centres:hover .icon-switcher {
   background-position: -40px -40px;
 }
 
@@ -313,19 +313,19 @@ width: 300px;
 
 /* @group Cycle Stands */
 
-#openlayers-switcher-block #openlayers-switcher-block--cycle-stands {
+#openlayers-switcher-block .openlayers-switcher-block--cycle-stands {
   border-color: #8F6A8E;
 }
 
-#openlayers-switcher-block #openlayers-switcher-block--cycle-stands:hover {
+#openlayers-switcher-block .openlayers-switcher-block--cycle-stands:hover {
   background-color: #8F6A8E;
 }
 
-#openlayers-switcher-block--cycle-stands .icon-switcher {
+.openlayers-switcher-block--cycle-stands .icon-switcher {
   background-position: -80px 0px;
 }
 
-#openlayers-switcher-block--cycle-stands:hover .icon-switcher {
+.openlayers-switcher-block--cycle-stands:hover .icon-switcher {
   background-position: -80px -40px;
 }
 
@@ -333,19 +333,19 @@ width: 300px;
 
 /* @group Police Stations */
 
-#openlayers-switcher-block #openlayers-switcher-block--police-stations {
+#openlayers-switcher-block .openlayers-switcher-block--police-stations {
   border-color: #363638;
 }
 
- #openlayers-switcher-block #openlayers-switcher-block--police-stations:hover {
+ #openlayers-switcher-block .openlayers-switcher-block--police-stations:hover {
   background-color: #363638;
 }
 
-#openlayers-switcher-block--police-stations .icon-switcher {
+.openlayers-switcher-block--police-stations .icon-switcher {
   background-position: -120px 0px;
 }
 
-#openlayers-switcher-block--police-stations:hover .icon-switcher {
+.openlayers-switcher-block--police-stations:hover .icon-switcher {
   background-position: -120px -40px;
 }
 
@@ -353,19 +353,19 @@ width: 300px;
 
 /* @group Toilets */
 
-#openlayers-switcher-block #openlayers-switcher-block--community-toilets {
+#openlayers-switcher-block .openlayers-switcher-block--community-toilets {
   border-color: #6B6B77;
 }
 
- #openlayers-switcher-block #openlayers-switcher-block--community-toilets:hover {
+ #openlayers-switcher-block .openlayers-switcher-block--community-toilets:hover {
   background-color: #6B6B77;
 }
 
-#openlayers-switcher-block--community-toilets .icon-switcher {
+.openlayers-switcher-block--community-toilets .icon-switcher {
   background-position: -160px 0px;
 }
 
-#openlayers-switcher-block--community-toilets:hover .icon-switcher {
+.openlayers-switcher-block--community-toilets:hover .icon-switcher {
   background-position: -160px -40px;
 }
 
@@ -373,19 +373,19 @@ width: 300px;
 
 /* @group Food Growing */
 
-#openlayers-switcher-block #openlayers-switcher-block--food-growing-projects {
+#openlayers-switcher-block .openlayers-switcher-block--food-growing-projects {
   border-color: #6BA237;
 }
 
- #openlayers-switcher-block #openlayers-switcher-block--food-growing-projects:hover {
+ #openlayers-switcher-block .openlayers-switcher-block--food-growing-projects:hover {
   background-color: #6BA237;
 }
 
-#openlayers-switcher-block--food-growing-projects .icon-switcher {
+.openlayers-switcher-block--food-growing-projects .icon-switcher {
   background-position: -200px 0px;
 }
 
-#openlayers-switcher-block--food-growing-projects:hover .icon-switcher {
+.openlayers-switcher-block--food-growing-projects:hover .icon-switcher {
   background-position: -200px -40px;
 }
 
@@ -393,19 +393,19 @@ width: 300px;
 
 /* @group Libraries */
 
-#openlayers-switcher-block #openlayers-switcher-block--libraries {
+#openlayers-switcher-block .openlayers-switcher-block--libraries {
    border-color: #F39C00;
 }
 
- #openlayers-switcher-block #openlayers-switcher-block--libraries:hover {
+ #openlayers-switcher-block .openlayers-switcher-block--libraries:hover {
   background-color: #F39C00;
 }
 
-#openlayers-switcher-block #openlayers-switcher-block--libraries .icon-switcher {
+#openlayers-switcher-block .openlayers-switcher-block--libraries .icon-switcher {
   background-position: -240px 0px;
 }
 
-#openlayers-switcher-block #openlayers-switcher-block--libraries:hover .icon-switcher {
+#openlayers-switcher-block .openlayers-switcher-block--libraries:hover .icon-switcher {
   background-position: -240px -40px;
 }
 
@@ -413,19 +413,19 @@ width: 300px;
 
 /* @group Recycling */
 
-#openlayers-switcher-block #openlayers-switcher-block--recycling {
+#openlayers-switcher-block .openlayers-switcher-block--recycling {
   border-color: #476728;
 }
 
- #openlayers-switcher-block #openlayers-switcher-block--recycling:hover {
+ #openlayers-switcher-block .openlayers-switcher-block--recycling:hover {
   background-color: #476728;
 }
 
-#openlayers-switcher-block--recycling .icon-switcher {
+.openlayers-switcher-block--recycling .icon-switcher {
   background-position: -280px 0px;
 }
 
-#openlayers-switcher-block--recycling:hover .icon-switcher {
+.openlayers-switcher-block--recycling:hover .icon-switcher {
   background-position: -280px -40px;
 }
 
@@ -433,19 +433,19 @@ width: 300px;
 
 /* @group Primary Schools */
 
-#openlayers-switcher-block #openlayers-switcher-block--primary-schools {
+#openlayers-switcher-block .openlayers-switcher-block--primary-schools {
   border-color: #F8532A;
 }
 
- #openlayers-switcher-block #openlayers-switcher-block--primary-schools:hover {
+ #openlayers-switcher-block .openlayers-switcher-block--primary-schools:hover {
   background-color: #F8532A;
 }
 
-#openlayers-switcher-block--primary-schools .icon-switcher {
+.openlayers-switcher-block--primary-schools .icon-switcher {
   background-position: -320px 0px;
 }
 
-#openlayers-switcher-block--primary-schools:hover .icon-switcher {
+.openlayers-switcher-block--primary-schools:hover .icon-switcher {
   background-position: -320px -40px;
 }
 
@@ -453,19 +453,19 @@ width: 300px;
 
 /* @group Secondary Schools */
 
-#openlayers-switcher-block #openlayers-switcher-block--secondary-schools {
+#openlayers-switcher-block .openlayers-switcher-block--secondary-schools {
   border-color: #7F2737;
 }
 
- #openlayers-switcher-block #openlayers-switcher-block--secondary-schools:hover {
+ #openlayers-switcher-block .openlayers-switcher-block--secondary-schools:hover {
   background-color: #7F2737;
 }
 
-#openlayers-switcher-block--secondary-schools .icon-switcher {
+.openlayers-switcher-block--secondary-schools .icon-switcher {
   background-position: -360px 0px;
 }
 
-#openlayers-switcher-block--secondary-schools:hover .icon-switcher {
+.openlayers-switcher-block--secondary-schools:hover .icon-switcher {
   background-position: -360px -40px;
 }
 
@@ -473,19 +473,19 @@ width: 300px;
 
 /* @group Nursery Schools */
 
-#openlayers-switcher-block #openlayers-switcher-block--nursery-schools {
+#openlayers-switcher-block .openlayers-switcher-block--nursery-schools {
   border-color: #B36473;
 }
 
- #openlayers-switcher-block #openlayers-switcher-block--nursery-schools:hover {
+ #openlayers-switcher-block .openlayers-switcher-block--nursery-schools:hover {
   background-color: #B36473;
 }
 
-#openlayers-switcher-block--nursery-schools .icon-switcher {
+.openlayers-switcher-block--nursery-schools .icon-switcher {
   background-position: -400px 0px;
 }
 
-#openlayers-switcher-block--nursery-schools:hover .icon-switcher {
+.openlayers-switcher-block--nursery-schools:hover .icon-switcher {
   background-position: -400px -40px;
 }
 
@@ -493,19 +493,19 @@ width: 300px;
 
 /* @group Special Schools */
 
-#openlayers-switcher-block #openlayers-switcher-block--special-schools {
+#openlayers-switcher-block .openlayers-switcher-block--special-schools {
   border-color: #B36473;
 }
 
- #openlayers-switcher-block #openlayers-switcher-block--special-schools:hover {
+ #openlayers-switcher-block .openlayers-switcher-block--special-schools:hover {
   background-color: #B36473;
 }
 
-#openlayers-switcher-block--special-schools .icon-switcher {
+.openlayers-switcher-block--special-schools .icon-switcher {
   background-position: -440px 0px;
 }
 
-#openlayers-switcher-block--special-schools:hover .icon-switcher {
+.openlayers-switcher-block--special-schools:hover .icon-switcher {
   background-position: -440px -40px;
 }
 
@@ -513,19 +513,19 @@ width: 300px;
 
 /* @group Playgrounds */
 
-#openlayers-switcher-block #openlayers-switcher-block--adventure-playgrounds {
+#openlayers-switcher-block .openlayers-switcher-block--adventure-playgrounds {
    border-color: #C21432;
  }
 
-#openlayers-switcher-block #openlayers-switcher-block--adventure-playgrounds:hover {
+#openlayers-switcher-block .openlayers-switcher-block--adventure-playgrounds:hover {
   background-color: #C21432;
 }
 
-#openlayers-switcher-block--adventure-playgrounds .icon-switcher {
+.openlayers-switcher-block--adventure-playgrounds .icon-switcher {
   background-position: -480px 0px;
 }
 
-#openlayers-switcher-block--adventure-playgrounds:hover .icon-switcher {
+.openlayers-switcher-block--adventure-playgrounds:hover .icon-switcher {
   background-position: -480px -40px;
 }
 
