@@ -62,3 +62,19 @@ function _openlayers_switcher_content() {
    */
 }
 
+/**
+ * Implementation of hook_js_alter().
+ *
+ * We are using OpenLayers-2.11.
+ * This is important to note because we have altered OpenLayers-2.11's version
+ * of OpenLayers.js at lines 2817 and 2818 to provide the structure needed for
+ * our css to work:
+ *
+ * 
+ */
+function openlayers_switcher_js_alter(&$javascript) {
+  $path = "sites/all/libraries/openlayers/OpenLayers-2.11/OpenLayers.js";
+  $javascript[$path]['data'] = drupal_get_path('module', 'openlayers_switcher')
+    . '/OpenLayers-2.11/OpenLayers.js';
+  dpm($javascript[$path]['data']);
+}

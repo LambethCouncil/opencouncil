@@ -1,8 +1,8 @@
-#map-switcher-block {
+#openlayers-switcher-block {
 	margin-top: 10px;
 }
 
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block a {
+#block-openlayers-switcher-openlayers-switcher-block #openlayers-switcher-block a {
 	background-repeat: no-repeat;
 	display: block;
 	float: left;
@@ -12,54 +12,54 @@
 	padding: 5px;
 }
 
-#block-openlayers-switcher-openlayers-switcher-block #map-switcher-block a:hover {
+#block-openlayers-switcher-openlayers-switcher-block #openlayers-switcher-block a:hover {
 	opacity: 0.9;
 }
 
-#openlayers-switcher-block--cycle-stands {
+.openlayers-switcher-block--cycle-stands {
   background-image: url('/sites/all/themes/opencouncil/images/cycle-stands-on.png');
 }
 
-#openlayers-switcher-block--car-parks {
+.openlayers-switcher-block--car-parks {
   background-image: url('/sites/all/themes/opencouncil/images/car-parks-on.png');
 }
 
-#openlayers-switcher-block--adventure-playgrounds {
+.openlayers-switcher-block--adventure-playgrounds {
   background-image: url('/sites/all/themes/opencouncil/images/adventure-playgrounds-on.png');
 }
 
-#openlayers-switcher-block--childrens-centres {
+.openlayers-switcher-block--childrens-centres {
   background-image: url('/sites/all/themes/opencouncil/images/childrens-centres-on.png');
 }
 
-#openlayers-switcher-block--police-stations {
+.openlayers-switcher-block--police-stations {
   background-image: url('/sites/all/themes/opencouncil/images/police-stations-on.png');
 }
 
-#openlayers-switcher-block--community-toilets {
+.openlayers-switcher-block--community-toilets {
   background-image: url('/sites/all/themes/opencouncil/images/community-toilets-on.png');
 }
 
-#openlayers-switcher-block--food-growing-projects {
+.openlayers-switcher-block--food-growing-projects {
   background-image: url('/sites/all/themes/opencouncil/images/food-growing-projects-on.png');
 }
 
-#openlayers-switcher-block--libraries {
+.openlayers-switcher-block--libraries {
   background-image: url('/sites/all/themes/opencouncil/images/libraries-on.png');
 }
 
-#openlayers-switcher-block--recycling {
+.openlayers-switcher-block--recycling {
   background-image: url('/sites/all/themes/opencouncil/images/recycling-on.png');
 }
 
-#openlayers-switcher-block--primary-schools {
+.openlayers-switcher-block--primary-schools {
   background-image: url('/sites/all/themes/opencouncil/images/primary-schools-on.png');
 }
 
-#openlayers-switcher-block--secondary-schools {
+.openlayers-switcher-block--secondary-schools {
   background-image: url('/sites/all/themes/opencouncil/images/secondary-schools-on.png');
 }
 
-#openlayers-switcher-block--nursery-schools {
+.openlayers-switcher-block--nursery-schools {
   background-image: url('/sites/all/themes/opencouncil/images/nursery-schools-on.png');
 }
