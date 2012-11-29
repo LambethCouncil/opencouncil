@@ -3,7 +3,7 @@
  *  apply to the normal and widescreen layouts. You may override these styles in the normal 
  *  and widescreen CSS files as appropriate. */
  
- #map-switcher-block a {
+ #openlayers-switcher-block a {
    	height: 85px;
  	width: 85px;
   	margin: 5px;
