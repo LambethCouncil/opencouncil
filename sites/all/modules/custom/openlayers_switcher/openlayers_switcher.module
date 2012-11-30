@@ -25,9 +25,6 @@ function openlayers_switcher_block_view($delta = '') {
             'js' => array(
               drupal_get_path('module', 'openlayers_switcher') . '/js/openlayers_switcher.js',
             ),
-            'css' => array(
-              drupal_get_path('module', 'openlayers_switcher') . '/css/openlayers_switcher.css',
-            ),
           ),
         ),
       );
