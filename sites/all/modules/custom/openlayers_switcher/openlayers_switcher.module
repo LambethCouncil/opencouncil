@@ -2,6 +2,11 @@
 
 /**
  * Implementation of hook_block_info().
+ *
+ * Provides a block which will contain the layer switcher icons.
+ *
+ * You will need to put this block in the correct region by going to:
+ * Structure > Blocks in your browser.
  */
 function openlayers_switcher_block_info() {
   $blocks['openlayers-switcher-block'] = array(
@@ -12,6 +17,8 @@ function openlayers_switcher_block_info() {
 
 /**
  * Implementation of hook_block_view().
+ *
+ * Renders a block which will contain the layer switcher icons.
  */
 function openlayers_switcher_block_view($delta = '') {
   // http://www.jaypan.com/tutorial/adding-css-and-js-cached-block-drupal-7
@@ -36,36 +43,27 @@ function openlayers_switcher_block_view($delta = '') {
 /**
  * custom html block
  * @return string
+ *
+ * Returns an empty div which will be populated using javascript with the layer
+ * switcher icons.
+ *
+ * See the implementation of hook_js_alter() for how this is done.
  */
 function _openlayers_switcher_content() {
-  $images_dir = drupal_get_path('theme', 'opencouncil') . '/images/';
   return "<div id='openlayers-switcher-block'></div>";
-  /*
-  return "<div id='openlayers-switcher-block'>
-      <a id='openlayers-switcher-block--car-parks'><span>Car Parks</span></a>
-      <a id='openlayers-switcher-block--childrens-centres'><span>Children's Centres</span></a>
-      <a id='openlayers-switcher-block--cycle-stands'><span>Cycle Stands</span></a>
-      <a id='openlayers-switcher-block--police-stations'><span>Police Stations</span></a>
-      <a id='openlayers-switcher-block--community-toilets'><span>Community Toilets</span></a>
-      <a id='openlayers-switcher-block--food-growing-projects'><span>Food Growing Projects</span></a>
-      <a id='openlayers-switcher-block--libraries'><span>Libraries</span></a>
-      <a id='openlayers-switcher-block--recycling'><span>Recycling</span></a>
-      <a id='openlayers-switcher-block--primary-schools'><span>Primary Schools</span></a>
-      <a id='openlayers-switcher-block--secondary-schools'><span>Secondary Schools</span></a>
-      <a id='openlayers-switcher-block--nursery-schools'><span>Nursery Schools</span></a>
-      <a id='openlayers-switcher-block--special-schools'><span>Special Schools</span></a>
-      <a id='openlayers-switcher-block--adventure-playgrounds'><span>Adventure Playgrounds</span></a>
-      </div>";
-   */
 }
 
 /**
  * Implementation of hook_js_alter().
  *
- * We are using OpenLayers-2.11.
- * This is important to note because we have altered OpenLayers-2.11's version
+ * IMPORTANT: We are using OpenLayers-2.11.
+ *
+ * In the browser, go to /admin/structure/openlayers and ensure that the 
+ * 'OpenLayers Source' textbox points at the correct OpenLayers version.
+ *
+ * This is important to note because we have altered the OpenLayers-2.11 version
  * of OpenLayers.js at lines 2817 and 2818 to provide the structure needed for
- * our css to work.
+ * our css to work as we wish with the layer switcher icons.
  *
  * You should be able to run this diff command from the openlayers_switcher 
  * module folder to see the changes:
@@ -78,5 +76,5 @@ function openlayers_switcher_js_alter(&$javascript) {
   // http://drupal.org/node/1306584
   $my_ol_path = drupal_get_path('module', 'openlayers_switcher')
     . '/OpenLayers-2.11/OpenLayers.js';
-  $javascript[$path]['data'] = drupal_js_defaults($my_ol_path);
+  $javascript[$ol_path]['data'] = drupal_js_defaults($my_ol_path);
 }
