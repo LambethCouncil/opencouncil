@@ -65,12 +65,18 @@ function _openlayers_switcher_content() {
  * We are using OpenLayers-2.11.
  * This is important to note because we have altered OpenLayers-2.11's version
  * of OpenLayers.js at lines 2817 and 2818 to provide the structure needed for
- * our css to work:
+ * our css to work.
  *
- * 
+ * You should be able to run this diff command from the openlayers_switcher 
+ * module folder to see the changes:
+ *
+ * diff ./OpenLayers-2.11/OpenLayers.js ../../../libraries/openlayers/OpenLayers-2.11/OpenLayers.js
  */
 function openlayers_switcher_js_alter(&$javascript) {
-  $path = "sites/all/libraries/openlayers/OpenLayers-2.11/OpenLayers.js";
-  $javascript[$path]['data'] = drupal_get_path('module', 'openlayers_switcher')
+  $ol_path = 'sites/all/libraries/openlayers/OpenLayers-2.11/OpenLayers.js';
+  // drupal_js_defaults() needed.
+  // http://drupal.org/node/1306584
+  $my_ol_path = drupal_get_path('module', 'openlayers_switcher')
     . '/OpenLayers-2.11/OpenLayers.js';
+  $javascript[$path]['data'] = drupal_js_defaults($my_ol_path);
 }
