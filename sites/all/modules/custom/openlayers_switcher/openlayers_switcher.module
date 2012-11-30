@@ -28,8 +28,7 @@ function openlayers_switcher_block_view($delta = '') {
       $block = array(
         'content' => array(
           '#markup' => _openlayers_switcher_content(),
-          ),
-        );
+        ),
       );
       break;
   }
