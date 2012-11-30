@@ -28,6 +28,11 @@ function openlayers_switcher_block_view($delta = '') {
       $block = array(
         'content' => array(
           '#markup' => _openlayers_switcher_content(),
+          '#attached' => array(
+            'js' => array(
+              drupal_get_path('module', 'openlayers_switcher') . '/js/openlayers_switcher.js',
+            ),
+          ),
         ),
       );
       break;
