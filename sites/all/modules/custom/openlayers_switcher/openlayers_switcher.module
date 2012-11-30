@@ -71,5 +71,5 @@ function openlayers_switcher_js_alter(&$javascript) {
   // http://drupal.org/node/1306584
   $my_ol_path = drupal_get_path('module', 'openlayers_switcher')
     . '/OpenLayers-2.11/OpenLayers.js';
-  $javascript[$ol_path]['data'] = drupal_js_defaults($my_ol_path);
+  $javascript[$ol_path] = drupal_js_defaults($my_ol_path);
 }
