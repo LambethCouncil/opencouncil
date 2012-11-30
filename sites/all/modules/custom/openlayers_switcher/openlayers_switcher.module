@@ -29,7 +29,7 @@ function openlayers_switcher_block_view($delta = '') {
         'content' => array(
           '#markup' => _openlayers_switcher_content(),
           ),
-        ),
+        );
       );
       break;
   }
