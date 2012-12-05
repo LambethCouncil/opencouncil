@@ -217,11 +217,11 @@ width: 300px;
 	padding: 5px 0;
 }
 
-.openlayers-switcher-block {
+#openlayers-switcher-block {
 	margin-top: 10px;
 }
 
-.openlayers-switcher-block a {
+#openlayers-switcher-block a {
 	display: block;
 	float: left;
 	height: 35px;
@@ -240,7 +240,7 @@ width: 300px;
 	text-decoration: none;
 }
 
-.openlayers-switcher-block a:hover {
+#openlayers-switcher-block a:hover {
 	-moz-transition: all 0.3s ease-in;
 	    -webkit-transition: all 0.3s ease-in;
 	    -o-transition: all 0.3s ease-in;
