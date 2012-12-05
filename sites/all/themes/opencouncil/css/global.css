@@ -20,7 +20,7 @@ a:link {color: #795582; font-weight: bold; text-decoration: none}
 a:visited {color: #795582; text-decoration: none}
 a:hover {text-decoration: underline}
 a[name]:hover {text-decoration: none; color: #000000}
-a:active {color: #000000; background-color: #eeeeee; text-decoration: underline}
+a:active {color: #000000; text-decoration: underline}
 
 p {font-size: 100%; margin: 3px 0 15px; line-height: 125%}
 
@@ -68,6 +68,10 @@ h1.title {
 
 #zone-menu a {
     color:#fff;
+}
+
+.main-menu {
+	font-size: 1.2em;
 }
 
 #zone-branding-wrapper {
