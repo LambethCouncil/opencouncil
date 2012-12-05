@@ -9,8 +9,10 @@
         //
         // UNCOMMENT THESE NEXT TWO LINES TO PUT THE SWITCHER UNDER THE MAP
         //
-          $('.layersDiv .dataLayersDiv').appendTo('#openlayers-switcher-block-lhs');
+        if ($('.layersDiv .dataLayersDiv').length) {
+          $('.layersDiv .dataLayersDiv').appendTo('#openlayers-switcher-block');
           $('.layersDiv .dataLbl').hide();
+        }
         //
         //
 
@@ -180,14 +182,18 @@
       });
     }
   }
-}(jQuery));
 
-function _show_all_layers(ol) {
-  var layers = ol.openlayers.layers;
-  for (var i = 0; i < layers.length; ++i) {
-    if (!layers[i].isBaseLayer) {
-      layers[i].setVisibility(true);
+  function _show_all_layers(ol) {
+    var layers = ol.openlayers.layers;
+    for (var i = 0; i < layers.length; ++i) {
+      if (!layers[i].isBaseLayer) {
+        layers[i].setVisibility(true);
+        console.log(layers[i].name);
+        console.log(layers[i]);
+        $('.openlayers-switcher-block--' + layers[i].name).addClass('active');
+      }
     }
   }
-}
+}(jQuery));
+
 
