@@ -5,15 +5,138 @@
 /* This file will hold styles for the mobile version of your website (mobile first). */
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
 
+/* @group Standard Settings */
+	
+	body {
+	font: 87.5%/1.5 Arial, sans-serif;
+	color: #666;
+	background: #FFF;
+	}
+		
+	.gamma {
+	margin-left: 0;
+	margin-right: 0;
+	}
+	
+	.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+	
+	/* @end */
+
+/* @group System Messages */
+
+div.messages {
+padding: 8px 35px 8px 14px;
+margin-bottom: 20px;
+color: #C09853;
+text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+background: #FCF8E3;
+border: 1px solid #FBEED5;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+}
+
+.messages.status {
+color: #468847;
+background: #DFF0D8;
+border-color: #D6E9C6;
+}
+	
+.messages.warning {
+color: #3A87AD;
+background: #D9EDF7;
+border-color: #BCE8F1;
+}
+	
+.messages.error {
+color: #B94A48;
+background: #F2DEDE;
+border-color: #EED3D7;
+}
+
+div.messages ul {
+margin: 0px 0px 0px 15px; /* LTR */
+padding: 0px;
+}
+
+div.messages ul li {
+list-style: disc;
+}
+
+.form-item input.error,
+.form-item textarea.error,
+.form-item select.error {
+border: 1px solid red;
+}
+
+/* @end */
+
+/* @group Type Elements */
+
+/* ==========TYPE ELEMENTS========== */
+
+h1, h2, h3, h4, h5, h6 {
+color:#666;
+font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+margin-bottom: 10px;
+}
+
+h1#page-title {
+font-size: 1.8em;
+}
+
+h2 {
+font-size: 1.5em;
+line-height: 1.7;
+}
+
+h3 {
+font-size: 1.3em;
+line-height: 1.5;
+}
+
+h4 {
+	
+}
+
+blockquote {
+font-family: Georgia, serif;
+font-style: italic;
+margin: 20px 0px;
+border-left: 10px solid #F7F7F7;
+display: block;
+padding-left: 20px;
+font-size: 1em;
+}
+
+p {
+line-height: 1.8;
+color: #666;
+font-size: 1em;
+margin: 10px 0px;
+}
+
+.subtitle {
+font-size: 1em;
+color: #999;
+padding-bottom: 10px;
+}
+
+::selection {
+background: #865477;
+color: #FFFFFF;
+}
+
+/* @end */
+
 /* Typography & font colours*/
-body {
-     font-family:helvetica, arial, sans-serif;
-     font-size:87.5%;
-}
-h1,h2,h3,h4,h5 {
-    font-family:helvetica, arial, sans-serif;
-    color:#795582;
-}
 
 a {color:#000000; font-weight: bold; text-decoration: none}
 a:link {color: #795582; font-weight: bold; text-decoration: none}
@@ -244,7 +367,7 @@ width: 300px;
 	text-decoration: none;
 }
 
-#openlayers-switcher-block a:hover {
+#openlayers-switcher-block a:hover, #openlayers-switcher-block a.active {
 	-moz-transition: all 0.3s ease-in;
 	    -webkit-transition: all 0.3s ease-in;
 	    -o-transition: all 0.3s ease-in;
@@ -281,7 +404,7 @@ width: 300px;
   border-color: #334E79;
 }
 
-#openlayers-switcher-block .openlayers-switcher-block--car-parks:hover {
+#openlayers-switcher-block .openlayers-switcher-block--car-parks:hover, #openlayers-switcher-block .openlayers-switcher-block--car-parks.active {
   background-color: #334E79;
  }
  
@@ -289,7 +412,7 @@ width: 300px;
    background-position: 0px 0px;
  }
  
- .openlayers-switcher-block--car-parks:hover .icon-switcher {
+ .openlayers-switcher-block--car-parks:hover .icon-switcher, .openlayers-switcher-block--car-parks.active .icon-switcher {
     background-position: 0px -40px;
   }
 
@@ -300,7 +423,7 @@ width: 300px;
   border-color: #E43456;
 }
 
- #openlayers-switcher-block .openlayers-switcher-block--childrens-centres:hover {
+ #openlayers-switcher-block .openlayers-switcher-block--childrens-centres:hover, #openlayers-switcher-block .openlayers-switcher-block--childrens-centres.active {
   background-color: #E43456;
   background-position: -40px -40px;
 }
@@ -309,7 +432,7 @@ width: 300px;
   background-position: -40px 0px;
 }
 
-.openlayers-switcher-block--childrens-centres:hover .icon-switcher {
+.openlayers-switcher-block--childrens-centres:hover .icon-switcher, .openlayers-switcher-block--childrens-centres.active .icon-switcher {
   background-position: -40px -40px;
 }
 
@@ -321,7 +444,7 @@ width: 300px;
   border-color: #8F6A8E;
 }
 
-#openlayers-switcher-block .openlayers-switcher-block--cycle-stands:hover {
+#openlayers-switcher-block .openlayers-switcher-block--cycle-stands:hover, #openlayers-switcher-block .openlayers-switcher-block--cycle-stands.active {
   background-color: #8F6A8E;
 }
 
@@ -329,7 +452,7 @@ width: 300px;
   background-position: -80px 0px;
 }
 
-.openlayers-switcher-block--cycle-stands:hover .icon-switcher {
+.openlayers-switcher-block--cycle-stands:hover .icon-switcher, .openlayers-switcher-block--cycle-stands.active .icon-switcher {
   background-position: -80px -40px;
 }
 
@@ -341,7 +464,7 @@ width: 300px;
   border-color: #363638;
 }
 
- #openlayers-switcher-block .openlayers-switcher-block--police-stations:hover {
+ #openlayers-switcher-block .openlayers-switcher-block--police-stations:hover, #openlayers-switcher-block .openlayers-switcher-block--police-stations.active {
   background-color: #363638;
 }
 
@@ -349,7 +472,7 @@ width: 300px;
   background-position: -120px 0px;
 }
 
-.openlayers-switcher-block--police-stations:hover .icon-switcher {
+.openlayers-switcher-block--police-stations:hover .icon-switcher, .openlayers-switcher-block--police-stations.active .icon-switcher {
   background-position: -120px -40px;
 }
 
@@ -361,7 +484,7 @@ width: 300px;
   border-color: #6B6B77;
 }
 
- #openlayers-switcher-block .openlayers-switcher-block--community-toilets:hover {
+ #openlayers-switcher-block .openlayers-switcher-block--community-toilets:hover, #openlayers-switcher-block .openlayers-switcher-block--community-toilets.active {
   background-color: #6B6B77;
 }
 
@@ -369,7 +492,7 @@ width: 300px;
   background-position: -160px 0px;
 }
 
-.openlayers-switcher-block--community-toilets:hover .icon-switcher {
+.openlayers-switcher-block--community-toilets:hover .icon-switcher, .openlayers-switcher-block--community-toilets.active .icon-switcher {
   background-position: -160px -40px;
 }
 
@@ -381,7 +504,7 @@ width: 300px;
   border-color: #6BA237;
 }
 
- #openlayers-switcher-block .openlayers-switcher-block--food-growing-projects:hover {
+ #openlayers-switcher-block .openlayers-switcher-block--food-growing-projects:hover, #openlayers-switcher-block .openlayers-switcher-block--food-growing-projects.active {
   background-color: #6BA237;
 }
 
@@ -389,7 +512,7 @@ width: 300px;
   background-position: -200px 0px;
 }
 
-.openlayers-switcher-block--food-growing-projects:hover .icon-switcher {
+.openlayers-switcher-block--food-growing-projects:hover .icon-switcher, .openlayers-switcher-block--food-growing-projects.active .icon-switcher {
   background-position: -200px -40px;
 }
 
@@ -401,7 +524,7 @@ width: 300px;
    border-color: #F39C00;
 }
 
- #openlayers-switcher-block .openlayers-switcher-block--libraries:hover {
+ #openlayers-switcher-block .openlayers-switcher-block--libraries:hover, #openlayers-switcher-block .openlayers-switcher-block--libraries.active {
   background-color: #F39C00;
 }
 
@@ -409,7 +532,7 @@ width: 300px;
   background-position: -240px 0px;
 }
 
-#openlayers-switcher-block .openlayers-switcher-block--libraries:hover .icon-switcher {
+#openlayers-switcher-block .openlayers-switcher-block--libraries:hover .icon-switcher, #openlayers-switcher-block .openlayers-switcher-block--libraries.active .icon-switcher {
   background-position: -240px -40px;
 }
 
@@ -421,7 +544,7 @@ width: 300px;
   border-color: #476728;
 }
 
- #openlayers-switcher-block .openlayers-switcher-block--recycling:hover {
+ #openlayers-switcher-block .openlayers-switcher-block--recycling:hover, #openlayers-switcher-block .openlayers-switcher-block--recycling.active {
   background-color: #476728;
 }
 
@@ -429,7 +552,7 @@ width: 300px;
   background-position: -280px 0px;
 }
 
-.openlayers-switcher-block--recycling:hover .icon-switcher {
+.openlayers-switcher-block--recycling:hover .icon-switcher, .openlayers-switcher-block--recycling.active .icon-switcher {
   background-position: -280px -40px;
 }
 
@@ -441,7 +564,7 @@ width: 300px;
   border-color: #F8532A;
 }
 
- #openlayers-switcher-block .openlayers-switcher-block--primary-schools:hover {
+ #openlayers-switcher-block .openlayers-switcher-block--primary-schools:hover, #openlayers-switcher-block .openlayers-switcher-block--primary-schools.active {
   background-color: #F8532A;
 }
 
@@ -449,7 +572,7 @@ width: 300px;
   background-position: -320px 0px;
 }
 
-.openlayers-switcher-block--primary-schools:hover .icon-switcher {
+.openlayers-switcher-block--primary-schools:hover .icon-switcher, .openlayers-switcher-block--primary-schools.active .icon-switcher {
   background-position: -320px -40px;
 }
 
@@ -461,7 +584,7 @@ width: 300px;
   border-color: #7F2737;
 }
 
- #openlayers-switcher-block .openlayers-switcher-block--secondary-schools:hover {
+ #openlayers-switcher-block .openlayers-switcher-block--secondary-schools:hover, #openlayers-switcher-block .openlayers-switcher-block--secondary-schools.active {
   background-color: #7F2737;
 }
 
@@ -469,7 +592,7 @@ width: 300px;
   background-position: -360px 0px;
 }
 
-.openlayers-switcher-block--secondary-schools:hover .icon-switcher {
+.openlayers-switcher-block--secondary-schools:hover .icon-switcher, .openlayers-switcher-block--secondary-schools.active .icon-switcher {
   background-position: -360px -40px;
 }
 
@@ -481,7 +604,7 @@ width: 300px;
   border-color: #B36473;
 }
 
- #openlayers-switcher-block .openlayers-switcher-block--nursery-schools:hover {
+ #openlayers-switcher-block .openlayers-switcher-block--nursery-schools:hover, #openlayers-switcher-block .openlayers-switcher-block--nursery-schools.active {
   background-color: #B36473;
 }
 
@@ -489,7 +612,7 @@ width: 300px;
   background-position: -400px 0px;
 }
 
-.openlayers-switcher-block--nursery-schools:hover .icon-switcher {
+.openlayers-switcher-block--nursery-schools:hover .icon-switcher, .openlayers-switcher-block--nursery-schools.active .icon-switcher {
   background-position: -400px -40px;
 }
 
@@ -501,7 +624,7 @@ width: 300px;
   border-color: #B36473;
 }
 
- #openlayers-switcher-block .openlayers-switcher-block--special-schools:hover {
+ #openlayers-switcher-block .openlayers-switcher-block--special-schools:hover, #openlayers-switcher-block .openlayers-switcher-block--special-schools.active {
   background-color: #B36473;
 }
 
@@ -509,7 +632,7 @@ width: 300px;
   background-position: -440px 0px;
 }
 
-.openlayers-switcher-block--special-schools:hover .icon-switcher {
+.openlayers-switcher-block--special-schools:hover .icon-switcher, .openlayers-switcher-block--special-schools.active .icon-switcher {
   background-position: -440px -40px;
 }
 
@@ -521,7 +644,7 @@ width: 300px;
    border-color: #C21432;
  }
 
-#openlayers-switcher-block .openlayers-switcher-block--adventure-playgrounds:hover {
+#openlayers-switcher-block .openlayers-switcher-block--adventure-playgrounds:hover, #openlayers-switcher-block .openlayers-switcher-block--adventure-playgrounds.active {
   background-color: #C21432;
 }
 
@@ -529,7 +652,7 @@ width: 300px;
   background-position: -480px 0px;
 }
 
-.openlayers-switcher-block--adventure-playgrounds:hover .icon-switcher {
+.openlayers-switcher-block--adventure-playgrounds:hover .icon-switcher, .openlayers-switcher-block--adventure-playgrounds.active .icon-switcher {
   background-position: -480px -40px;
 }
 
@@ -539,4 +662,29 @@ width: 300px;
 
 #block-map-center-map-center-block input[type="text"] {
 	max-width: 80%;
+}
+
+/* Town Page */
+
+.field-name-field-town-image {
+	float: left;
+	margin: 0 20px 20px 0;
+}
+
+.block-style {
+	background: #f5f5f5 url('../images/bg.jpg') no-repeat left top;
+}
+
+.block-style {
+	background: #EBEBEB;
+}
+
+.block-style h2.block-title {
+	font-size: 1.2em;
+	background: #DCDCDC;
+	padding: 5px 10px;
+}
+
+.block-style .content {
+	padding: 20px;
 }
