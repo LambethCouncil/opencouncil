@@ -2814,7 +2814,8 @@ var layers=this.map.layers.slice();if(!this.ascending){layers.reverse();}
 for(var i=0,len=layers.length;i<len;i++){var layer=layers[i];var baseLayer=layer.isBaseLayer;if(layer.displayInLayerSwitcher){if(baseLayer){containsBaseLayers=true;}else{containsOverlays=true;}
 var checked=(baseLayer)?(layer==this.map.baseLayer):layer.getVisibility();var inputElem=document.createElement("input");inputElem.id=this.id+"_input_"+layer.name;inputElem.name=(baseLayer)?this.id+"_baseLayers":layer.name;inputElem.type=(baseLayer)?"radio":"checkbox";inputElem.value=layer.name;inputElem.checked=checked;inputElem.defaultChecked=checked;if(!baseLayer&&!layer.inRange){inputElem.disabled=true;}
 
-var humanLayerName=layer.name.replace('-', ' ');
+// ML
+var humanLayerName=layer.name.replace(/-/g, ' ');
 
 var context={'inputElem':inputElem,'layer':layer,'layerSwitcher':this};OpenLayers.Event.observe(inputElem,"mouseup",OpenLayers.Function.bindAsEventListener(this.onInputClick,context));var aSwitcherBlock=document.createElement("a");var iconSwitcherSpan=document.createElement("span");var labelSpan=document.createElement("span");
 
