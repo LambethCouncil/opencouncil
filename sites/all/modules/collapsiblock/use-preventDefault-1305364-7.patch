@@ -1,0 +1,14 @@
+diff --git a/collapsiblock.js b/collapsiblock.js
+index 27f3d40..96df1fb 100644
+--- a/collapsiblock.js
++++ b/collapsiblock.js
+@@ -76,6 +76,9 @@
+             });
+             e.preventDefault();
+           });
++          $('a[role=link]', titleElt).click(function (e) {
++            e.preventDefault();
++          });
+           // Leave active blocks uncollapsed. If the block is expanded, do nothing.
+           if (stat ==  4 || (cookieData[id] == 0 || (stat == 3 && cookieData[id] == undefined)) && !$(this).find('a.active').size()) {
+             // Allow block content to assign class 'collapsiblock-force-open' to it's content to force
