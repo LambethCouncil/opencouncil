@@ -1,0 +1,13 @@
+name = Feature Bulletin
+description = Content type for bulletins
+core = 7.x
+package = Features
+dependencies[] = date
+dependencies[] = features
+dependencies[] = field_sql_storage
+dependencies[] = node
+dependencies[] = text
+features[features_api][] = api:1
+features[field][] = node-bulletin-body
+features[field][] = node-bulletin-field_bulletin_date
+features[node][] = bulletin

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Feature Points of Interest Views and Context feature.
+ */
+
+include_once 'feature_points_of_interest_views_and_context.features.inc';
