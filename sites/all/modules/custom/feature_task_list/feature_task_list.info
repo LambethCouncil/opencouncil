@@ -1,0 +1,12 @@
+name = Feature Task List
+core = 7.x
+package = Features
+dependencies[] = features
+dependencies[] = field_sql_storage
+dependencies[] = link
+dependencies[] = node
+dependencies[] = text
+features[features_api][] = api:1
+features[field][] = node-task_link-body
+features[field][] = node-task_link-field_task_link
+features[node][] = task_link
