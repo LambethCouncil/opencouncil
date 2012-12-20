@@ -205,9 +205,9 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'lambeth_drupal',
-      'username' => 'lambeth',
-      'password' => 'lambeth',
+      'database' => 'lambethnew',
+      'username' => 'root',
+      'password' => 'root',
       'host' => 'localhost',
       'port' => '',
       'driver' => 'mysql',

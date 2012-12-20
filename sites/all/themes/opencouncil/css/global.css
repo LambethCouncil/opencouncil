@@ -183,6 +183,7 @@ h1.title {
     top:0;
 }
 
+/* Restrict height for mobile devices */
 .view-points-of-interest .openlayers-container, .view-points-of-interest .openlayers-map {
 	height: 200px!important;
 }
