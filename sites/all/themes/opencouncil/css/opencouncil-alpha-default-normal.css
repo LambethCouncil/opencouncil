@@ -28,7 +28,7 @@
  }
  
  /* Set map back to 400px */
- .view-points-of-interest .openlayers-container, .openlayers-map {
+ .view-points-of-interest .openlayers-container, .view-points-of-interest .openlayers-map {
  	height: 400px!important;
  }
  
