@@ -231,6 +231,11 @@ function feature_point_of_interest_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Contact Person (field_contact_person) */
+  $handler->display->display_options['filters']['field_contact_person_target_id']['id'] = 'field_contact_person_target_id';
+  $handler->display->display_options['filters']['field_contact_person_target_id']['table'] = 'field_data_field_contact_person';
+  $handler->display->display_options['filters']['field_contact_person_target_id']['field'] = 'field_contact_person_target_id';
+  $handler->display->display_options['filters']['field_contact_person_target_id']['operator'] = 'not empty';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
@@ -585,6 +590,18 @@ function feature_point_of_interest_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['default_argument_skip_url'] = 0;
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['nid']['break_phrase'] = 0;
+  $handler->display->display_options['arguments']['nid']['not'] = 0;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -592,6 +609,11 @@ function feature_point_of_interest_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Primary Tasks (field_primary_tasks) */
+  $handler->display->display_options['filters']['field_primary_tasks_target_id']['id'] = 'field_primary_tasks_target_id';
+  $handler->display->display_options['filters']['field_primary_tasks_target_id']['table'] = 'field_data_field_primary_tasks';
+  $handler->display->display_options['filters']['field_primary_tasks_target_id']['field'] = 'field_primary_tasks_target_id';
+  $handler->display->display_options['filters']['field_primary_tasks_target_id']['operator'] = 'not empty';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
@@ -677,13 +699,6 @@ function feature_point_of_interest_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'point_of_interest' => 'point_of_interest',
-  );
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
@@ -789,13 +804,6 @@ function feature_point_of_interest_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'point_of_interest' => 'point_of_interest',
-  );
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
@@ -1061,6 +1069,8 @@ function feature_point_of_interest_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['hide_empty'] = 1;
+  $handler->display->display_options['row_options']['default_field_elements'] = 1;
   /* Field: Content: Resources */
   $handler->display->display_options['fields']['field_resources']['id'] = 'field_resources';
   $handler->display->display_options['fields']['field_resources']['table'] = 'field_data_field_resources';
@@ -1081,7 +1091,7 @@ function feature_point_of_interest_views_default_views() {
   $handler->display->display_options['fields']['field_resources']['alter']['html'] = 0;
   $handler->display->display_options['fields']['field_resources']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_resources']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['field_resources']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_resources']['hide_empty'] = 1;
   $handler->display->display_options['fields']['field_resources']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_resources']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_resources']['click_sort_column'] = 'fid';
@@ -1114,13 +1124,11 @@ function feature_point_of_interest_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'point_of_interest' => 'point_of_interest',
-  );
+  /* Filter criterion: Content: Resources (field_resources:delta) */
+  $handler->display->display_options['filters']['delta']['id'] = 'delta';
+  $handler->display->display_options['filters']['delta']['table'] = 'field_data_field_resources';
+  $handler->display->display_options['filters']['delta']['field'] = 'delta';
+  $handler->display->display_options['filters']['delta']['operator'] = 'not empty';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
@@ -1212,6 +1220,92 @@ function feature_point_of_interest_views_default_views() {
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
   $export['point_of_interest_useful_links'] = $view;
+
+  $view = new view;
+  $view->name = 'related_pages';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Related Pages';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Related Pages';
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['query_comment'] = FALSE;
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Related Pages */
+  $handler->display->display_options['fields']['field_related_pages']['id'] = 'field_related_pages';
+  $handler->display->display_options['fields']['field_related_pages']['table'] = 'field_data_field_related_pages';
+  $handler->display->display_options['fields']['field_related_pages']['field'] = 'field_related_pages';
+  $handler->display->display_options['fields']['field_related_pages']['label'] = '';
+  $handler->display->display_options['fields']['field_related_pages']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_related_pages']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_related_pages']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_related_pages']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_related_pages']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_related_pages']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_related_pages']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_related_pages']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_related_pages']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_related_pages']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['field_related_pages']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_related_pages']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_related_pages']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_related_pages']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_related_pages']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_related_pages']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_related_pages']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_related_pages']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_related_pages']['settings'] = array(
+    'link' => 1,
+  );
+  $handler->display->display_options['fields']['field_related_pages']['group_rows'] = 0;
+  $handler->display->display_options['fields']['field_related_pages']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_related_pages']['delta_reversed'] = 0;
+  $handler->display->display_options['fields']['field_related_pages']['delta_first_last'] = 0;
+  $handler->display->display_options['fields']['field_related_pages']['field_api_classes'] = 0;
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['default_argument_skip_url'] = 0;
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['nid']['break_phrase'] = 0;
+  $handler->display->display_options['arguments']['nid']['not'] = 0;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Related Pages (field_related_pages) */
+  $handler->display->display_options['filters']['field_related_pages_target_id']['id'] = 'field_related_pages_target_id';
+  $handler->display->display_options['filters']['field_related_pages_target_id']['table'] = 'field_data_field_related_pages';
+  $handler->display->display_options['filters']['field_related_pages_target_id']['field'] = 'field_related_pages_target_id';
+  $handler->display->display_options['filters']['field_related_pages_target_id']['operator'] = 'not empty';
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block');
+  $export['related_pages'] = $view;
 
   return $export;
 }

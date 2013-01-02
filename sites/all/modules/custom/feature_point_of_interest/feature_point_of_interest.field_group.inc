@@ -21,7 +21,7 @@ function feature_point_of_interest_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Further Info',
-    'weight' => '5',
+    'weight' => '7',
     'children' => array(
       0 => 'field_further_information',
       1 => 'field_title_and_description',
@@ -50,7 +50,7 @@ function feature_point_of_interest_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Images',
-    'weight' => '4',
+    'weight' => '6',
     'children' => array(
       0 => 'field_place_image',
     ),
@@ -77,11 +77,9 @@ function feature_point_of_interest_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Location',
-    'weight' => '3',
+    'weight' => '5',
     'children' => array(
-      0 => 'field_address',
-      1 => 'field_geo',
-      2 => 'field_reference_town',
+      0 => 'field_reference_town',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -106,7 +104,7 @@ function feature_point_of_interest_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Opening Times',
-    'weight' => '2',
+    'weight' => '4',
     'children' => array(
       0 => 'field_opening_times',
     ),
@@ -133,7 +131,7 @@ function feature_point_of_interest_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Other',
-    'weight' => '8',
+    'weight' => '10',
     'children' => array(
       0 => 'field_point_of_interest_type',
       1 => 'field_facilities',
@@ -162,7 +160,7 @@ function feature_point_of_interest_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Resources',
-    'weight' => '7',
+    'weight' => '9',
     'children' => array(
       0 => 'field_resources',
     ),
@@ -189,7 +187,7 @@ function feature_point_of_interest_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Task Links',
-    'weight' => '6',
+    'weight' => '8',
     'children' => array(
       0 => 'field_primary_tasks',
       1 => 'field_secondary_tasks',
