@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the feature_feeds_importer_recycling feature.
+ */
+
+include_once 'feature_feeds_importer_recycling.features.inc';
