@@ -855,3 +855,60 @@ width: 300px;
   .view-bulletin p {
     margin-bottom: 0px;
   }
+
+  /* List */
+
+  .views-field-field-title-and-description ul {
+    list-style-type: disc;
+    margin-left: 30px;
+  }
+
+  /* ----- Homepage ------- */
+
+  /* Menu */
+
+  .block-om-maximenu-om-maximenu-1 {
+    background: #F7F7F7;
+    margin-top: 20px;
+    border: 1px solid #DCDCDC;
+  }
+
+  .om-maximenu.om-maximenu-block ul.om-menu {
+    width: 100%;
+    padding: 5px;
+  }
+
+  #om-maximenu-task-menu li {
+    width: 15%;
+    border-right: 1px solid #DCDCDC;
+    padding-left: 15px;
+  }
+
+  .leaf-apply {
+    background: url(../images/icon-apply.png) no-repeat;
+  }
+
+  /* Slider */
+  .view-home-featured-content .caption {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.45);
+    width: 100%;
+  }
+
+  .caption h2 a, .caption p {
+    color: #FFF;
+    padding: 0 10px;
+  }
+
+  .flexslider {
+    margin-bottom: 0px;
+  }
+
+  /* Feedback */
+  #block-feedback-form .feedback-link {
+    font-size: 18px;
+    background: #795582;
+    padding: 5px 10px;
+    color: #FFF;
+  }
