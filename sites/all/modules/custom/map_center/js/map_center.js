@@ -2,17 +2,17 @@
   Drupal.behaviors.yourfunction = {
     attach: function(context) {
       $(document).ready(function() {
-
+alert('map_center.js');
         // http://stackoverflow.com/questions/1279957/how-to-move-an-element-into-another-element
         // NOTE: #block-block-1 is hard-coded.
         // commented out ml 2012-10-17 - revert to usual switcher.
         //
         // UNCOMMENT THESE NEXT TWO LINES TO PUT THE SWITCHER UNDER THE MAP
         //
-        if ($('.layersDiv .dataLayersDiv').length) {
-          $('.layersDiv .dataLayersDiv').appendTo('#openlayers-switcher-block');
-          $('.layersDiv .dataLbl').hide();
-        }
+        // if ($('.layersDiv .dataLayersDiv').length) {
+          // $('.layersDiv .dataLayersDiv').appendTo('#openlayers-switcher-block');
+          // $('.layersDiv .dataLbl').hide();
+        // }
         //
         //
 
@@ -34,10 +34,6 @@
             $.ajax({
               url: london_url,
               success: function(data) {
-                console.log(data);
-                console.log(data.coordinates[0]);
-                console.log(data.coordinates[1]);
-                console.log(data.coordinates[0] + ',' + data.coordinates[1]);
                 lat = data.coordinates[1];
                 lon = data.coordinates[0];
                 // Center the map.
@@ -195,5 +191,4 @@
     }
   }
 }(jQuery));
-
 
