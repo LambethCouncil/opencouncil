@@ -1,0 +1,181 @@
+From 4e4ca86e8cd738563925223e279ee7de855bd973 Mon Sep 17 00:00:00 2001
+From: Jeremiah Dow <jeremdow@gmail.com>
+Date: Fri, 5 Aug 2011 14:53:03 -0400
+Subject: [PATCH] rules integration with tokens
+
+---
+ feedback.info       |    2 +
+ feedback.module     |    1 +
+ feedback.rules.inc  |   41 +++++++++++++++++++++++
+ feedback.tokens.inc |   88 +++++++++++++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 132 insertions(+), 0 deletions(-)
+ create mode 100644 feedback.rules.inc
+ create mode 100644 feedback.tokens.inc
+
+diff --git a/feedback.info b/feedback.info
+index db396bb..b539a7b 100644
+--- a/feedback.info
++++ b/feedback.info
+@@ -4,4 +4,6 @@ package = Development
+ core = 7.x
+ configure = admin/config/user-interface/feedback
+ files[] = feedback.controller.inc
++files[] = feedback.rules.inc
++files[] = feedback.tokens.inc
+ files[] = tests/feedback.test
+diff --git a/feedback.module b/feedback.module
+index 799c190..61492be 100644
+--- a/feedback.module
++++ b/feedback.module
+@@ -276,6 +276,7 @@ function feedback_form_submit($form, &$form_state) {
+   $entry->location = $form_state['values']['location'];
+   feedback_save($entry);
+ 
++  rules_invoke_event('feedback_insert', $entry);
+   drupal_set_message(t('Thanks for your feedback!'));
+ }
+ 
+diff --git a/feedback.rules.inc b/feedback.rules.inc
+new file mode 100644
+index 0000000..f782e80
+--- /dev/null
++++ b/feedback.rules.inc
+@@ -0,0 +1,41 @@
++<?php
++
++/**
++ * @file
++ * Rules integration for feedback.
++ *
++ * @addtogroup rules
++ * @{
++ */
++
++/**
++ * Implementation of hook_rules_event_info().
++ */
++function feedback_rules_event_info() {
++  $defaults = array(
++    'group' => t('feedback'),
++    'module' => 'feedback',
++    'access callback' => 'feedback_rules_integration_access',
++  );
++  return array(
++    'feedback_insert' => $defaults + array(
++      'label' => t('After saving new feedback'),
++      'variables' => array(
++        'feedback' => array('type' => 'feedback', 'label' => t('created feedback')),
++      ),
++    ),
++  );
++}
++
++/**
++ * Comment integration access callback.
++ */
++function feedback_rules_integration_access($type, $name) {
++  if ($type == 'event' || $type == 'condition') {
++    return entity_access('view', 'feedback');
++  }
++}
++
++/**
++ * @}
++ */
+diff --git a/feedback.tokens.inc b/feedback.tokens.inc
+new file mode 100644
+index 0000000..89fe53a
+--- /dev/null
++++ b/feedback.tokens.inc
+@@ -0,0 +1,88 @@
++<?php
++
++/**
++ * @file
++ * Builds placeholder replacement tokens for feedback-related data.
++ */
++
++/**
++ * Implements hook_token_info().
++ */
++function feedback_token_info() {
++  $type = array(
++    'name' => t('Feedback'),
++    'description' => t('Tokens for feedback posted on the site.'),
++    'needs-data' => 'feedback',
++  );
++
++  $feedback['location_masked'] = array(
++    'name' => t("Location"),
++    'description' => t("The location where feedback was submitted."),
++  );
++  $feedback['url'] = array(
++    'name' => t("URL"),
++    'description' => t("The URL where feedback was submitted."),
++  );
++  $feedback['useragent'] = array(
++    'name' => t("User agent"),
++    'description' => t("The user agent string."),
++  );
++  $feedback['message'] = array(
++    'name' => t("Message"),
++    'description' => t("The message submitted."),
++  );
++  
++  return array(
++    'types' => array('feedback' => $type),
++    'tokens' => array(
++      'feedback' => $feedback,
++    ),
++  );
++}
++
++/**
++ * Implements hook_tokens().
++ */
++function feedback_tokens($type, $tokens, array $data = array(), array $options = array()) {
++  $url_options = array('absolute' => TRUE);
++  if (isset($options['language'])) {
++    $url_options['language'] = $options['language'];
++    $language_code = $options['language']->language;
++  }
++  else {
++    $language_code = NULL;
++  }
++  $sanitize = !empty($options['sanitize']);
++
++  $replacements = array();
++
++  if ($type == 'feedback' && !empty($data['feedback'])) {
++    $feedback = $data['feedback'];
++
++    foreach ($tokens as $name => $original) {
++      switch ($name) {
++        case 'uid':
++          $replacements[$original] = $feedback->uid;
++          break;
++
++        case 'url':
++          $replacements[$original] = $feedback->url;
++          break;
++
++        case 'location_masked':
++          $replacements[$original] = $feedback->location_masked;
++          break;
++
++        case 'useragent':
++          $replacements[$original] = $feedback->useragent;
++          break;
++
++        case 'message':
++          $replacements[$original] = $feedback->message;
++          break;
++      }
++    }
++  } 
++  
++  return $replacements;
++}
+-- 
+1.7.6
+
