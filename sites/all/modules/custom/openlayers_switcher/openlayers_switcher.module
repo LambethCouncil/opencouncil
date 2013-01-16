@@ -67,3 +67,36 @@ function _openlayers_switcher_content() {
 function openlayers_switcher_openlayers_map_preprocess_alter(&$map = array()) {
   $map['behaviors']['openlayers_behavior_layerswitcher']['maximizeDefault'] = 1;
 }
+
+/**
+ * Implementation of hook_js_alter().
+ *
+ * IMPORTANT: We are using OpenLayers-2.11.
+ *
+ * The changes to the OpenLayers.js file 
+ *
+ * In the browser, go to /admin/structure/openlayers and ensure that the 
+ * 'OpenLayers Source' textbox points at the correct OpenLayers version.
+ *
+ * This is important to note because we have altered the OpenLayers-2.11 version
+ * of OpenLayers.js at lines 2817 and 2818 to provide the HTML structure needed 
+ * for our css to work as we wish with the layer switcher icons.
+ *
+ * Applying these same changes to OpenLayers-2.12 is difficult - the structure
+ * of the file is very different - so we're sticking with OpenLayers-2.11 for
+ * now.
+ *
+ * You should be able to run this diff command from the openlayers_switcher 
+ * module folder to see the changes:
+ *
+ * diff ./OpenLayers-2.11/OpenLayers.js ../../../libraries/openlayers/OpenLayers-2.11/OpenLayers.js
+ */
+function openlayers_switcher_js_alter(&$javascript) {
+  $ol_path = 'sites/all/libraries/openlayers/OpenLayers-2.11/OpenLayers.js';
+  // drupal_js_defaults() needed.
+  // http://drupal.org/node/1306584
+  $my_ol_path = drupal_get_path('module', 'openlayers_switcher')
+    . '/OpenLayers-2.11/OpenLayers.js';
+  $javascript[$ol_path] = drupal_js_defaults($my_ol_path);
+}
+
