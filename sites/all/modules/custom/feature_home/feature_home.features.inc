@@ -65,6 +65,14 @@ function feature_home_image_default_styles() {
  */
 function feature_home_node_info() {
   $items = array(
+    'featured_content' => array(
+      'name' => t('Featured Content'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'home' => array(
       'name' => t('Home'),
       'base' => 'node_content',
