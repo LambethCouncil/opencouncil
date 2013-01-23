@@ -2812,22 +2812,112 @@ return redraw;},redraw:function(){if(!this.checkRedraw()){return this.div;}
 this.clearLayersArray("base");this.clearLayersArray("data");var containsOverlays=false;var containsBaseLayers=false;var len=this.map.layers.length;this.layerStates=new Array(len);for(var i=0;i<len;i++){var layer=this.map.layers[i];this.layerStates[i]={'name':layer.name,'visibility':layer.visibility,'inRange':layer.inRange,'id':layer.id};}
 var layers=this.map.layers.slice();if(!this.ascending){layers.reverse();}
 for(var i=0,len=layers.length;i<len;i++){var layer=layers[i];var baseLayer=layer.isBaseLayer;if(layer.displayInLayerSwitcher){if(baseLayer){containsBaseLayers=true;}else{containsOverlays=true;}
-var checked=(baseLayer)?(layer==this.map.baseLayer):layer.getVisibility();var inputElem=document.createElement("input");inputElem.id=this.id+"_input_"+layer.name;inputElem.name=(baseLayer)?this.id+"_baseLayers":layer.name;inputElem.type=(baseLayer)?"radio":"checkbox";inputElem.value=layer.name;inputElem.checked=checked;inputElem.defaultChecked=checked;if(!baseLayer&&!layer.inRange){inputElem.disabled=true;}
+var checked=(baseLayer)?(layer==this.map.baseLayer):layer.getVisibility();var inputElem=document.createElement("input");inputElem.id=this.id+"_input_"+layer.name;inputElem.name=(baseLayer)?this.id+"_baseLayers":layer.name;
 
-// ML
+// lambeth.coop
+// inputElem.type=(baseLayer)?"radio":"checkbox";
+inputElem.type=(baseLayer)?"button":"checkbox";
+
+inputElem.value=layer.name;inputElem.checked=checked;inputElem.defaultChecked=checked;if(!baseLayer&&!layer.inRange){inputElem.disabled=true;}
+
+// lambeth.coop
 var humanLayerName=layer.name.replace(/-/g, ' ');
+//
 
-var context={'inputElem':inputElem,'layer':layer,'layerSwitcher':this};OpenLayers.Event.observe(inputElem,"mouseup",OpenLayers.Function.bindAsEventListener(this.onInputClick,context));var aSwitcherBlock=document.createElement("a");var iconSwitcherSpan=document.createElement("span");var labelSpan=document.createElement("span");
+// lambeth.coop
+// create new helper elements for styling
+var aSwitcherBlock=document.createElement("a");
+var iconSwitcherSpan=document.createElement("span");
+var labelSpan=document.createElement("span");
+// add classes for styling
+if (!baseLayer) {
+  OpenLayers.Element.addClass(aSwitcherBlock,"openlayers-switcher-block--"+layer.name);
+  OpenLayers.Element.addClass(iconSwitcherSpan,"icon-switcher");
+  OpenLayers.Element.addClass(labelSpan,"switcher-text");
+}
+//
 
-OpenLayers.Element.addClass(aSwitcherBlock,"openlayers-switcher-block--"+layer.name);OpenLayers.Element.addClass(iconSwitcherSpan,"icon-switcher");OpenLayers.Element.addClass(labelSpan,"switcher-text");if(!baseLayer&&!layer.inRange){labelSpan.style.color="gray";}
+var context={'aSwitcherBlock':aSwitcherBlock, 'inputElem':inputElem,'layer':layer,'layerSwitcher':this};OpenLayers.Event.observe(inputElem,"mouseup",OpenLayers.Function.bindAsEventListener(this.onInputClick,context));
 
+if(!baseLayer&&!layer.inRange){labelSpan.style.color="gray";}
+
+// set label to have spaces instead of dashes
 labelSpan.innerHTML=humanLayerName;
+//
 
-labelSpan.style.verticalAlign=(baseLayer)?"bottom":"baseline";OpenLayers.Event.observe(aSwitcherBlock,"click",OpenLayers.Function.bindAsEventListener(this.onInputClick,context));var br=document.createElement("br");var groupArray=(baseLayer)?this.baseLayers:this.dataLayers;groupArray.push({'layer':layer,'inputElem':inputElem,'labelSpan':labelSpan});var groupDiv=(baseLayer)?this.baseLayersDiv:this.dataLayersDiv;groupDiv.appendChild(aSwitcherBlock);aSwitcherBlock.appendChild(iconSwitcherSpan);aSwitcherBlock.appendChild(labelSpan);}}
-this.dataLbl.style.display=(containsOverlays)?"":"none";this.baseLbl.style.display=(containsBaseLayers)?"":"none";return this.div;},onInputClick:function(e){if(!this.inputElem.disabled){if(this.inputElem.type=="radio"){this.inputElem.checked=true;this.layer.map.setBaseLayer(this.layer);}else{this.inputElem.checked=!this.inputElem.checked;this.layerSwitcher.updateMap();}}
+labelSpan.style.verticalAlign=(baseLayer)?"bottom":"baseline";
+
+// bind the click event to the aSwitcherBlock a element
+OpenLayers.Event.observe(aSwitcherBlock,"click",OpenLayers.Function.bindAsEventListener(this.onInputClick,context));
+/*
+// Commented out - the class is not persiting.
+OpenLayers.Event.observe(aSwitcherBlock,"click",OpenLayers.Function.bind(function(){
+  if (OpenLayers.Element.hasClass(aSwitcherBlock, "active")) {
+    console.log('removing ...');
+    OpenLayers.Element.removeClass(aSwitcherBlock, "active");
+  }
+  else {
+    console.log('adding ...');
+    OpenLayers.Element.addClass(aSwitcherBlock, "active");
+  }
+  console.log(aSwitcherBlock);
+}));
+*/
+var br=document.createElement("br");var groupArray=(baseLayer)?this.baseLayers:this.dataLayers;groupArray.push({'layer':layer,'inputElem':inputElem,'labelSpan':labelSpan});var groupDiv=(baseLayer)?this.baseLayersDiv:this.dataLayersDiv;
+
+// set the structure of the html elements
+if (baseLayer) {
+  OpenLayers.Element.addClass(inputElem, 'base-layer-switcher');
+  groupDiv.appendChild(inputElem);
+  // groupDiv.appendChild(labelSpan);
+  // groupDiv.appendChild(br);
+}
+else {
+  groupDiv.appendChild(aSwitcherBlock);
+  aSwitcherBlock.appendChild(iconSwitcherSpan);
+  aSwitcherBlock.appendChild(labelSpan);
+}
+}}
+
+this.dataLbl.style.display=(containsOverlays)?"":"none";this.baseLbl.style.display=(containsBaseLayers)?"":"none";return this.div;},
+  
+onInputClick:function(e) {
+  if(!this.inputElem.disabled) {
+    if(this.inputElem.type=="radio") {this.inputElem.checked=true;this.layer.map.setBaseLayer(this.layer);}
+    else { 
+      this.inputElem.checked=!this.inputElem.checked;
+      // Commented out. The change in class was not persistent.
+      //console.log(this.aSwitcherBlock);
+      //OpenLayers.Element.toggleClass(this.aSwitcherBlock, "active");
+      this.layerSwitcher.updateMap();
+      //OpenLayers.Element.toggleClass(this.aSwitcherBlock, "active");
+    }
+  }
+
 OpenLayers.Event.stop(e);},onLayerClick:function(e){this.updateMap();},updateMap:function(){for(var i=0,len=this.baseLayers.length;i<len;i++){var layerEntry=this.baseLayers[i];if(layerEntry.inputElem.checked){this.map.setBaseLayer(layerEntry.layer,false);}}
-for(var i=0,len=this.dataLayers.length;i<len;i++){var layerEntry=this.dataLayers[i];layerEntry.layer.setVisibility(layerEntry.inputElem.checked);}},maximizeControl:function(e){this.div.style.width="";this.div.style.height="";this.showControls(false);if(e!=null){OpenLayers.Event.stop(e);}},minimizeControl:function(e){this.div.style.width="0px";this.div.style.height="0px";this.showControls(true);if(e!=null){OpenLayers.Event.stop(e);}},showControls:function(minimize){this.maximizeDiv.style.display=minimize?"":"none";this.minimizeDiv.style.display=minimize?"none":"";this.layersDiv.style.display=minimize?"none":"";},loadContents:function(){OpenLayers.Event.observe(this.div,"mouseup",OpenLayers.Function.bindAsEventListener(this.mouseUp,this));OpenLayers.Event.observe(this.div,"click",this.ignoreEvent);OpenLayers.Event.observe(this.div,"mousedown",OpenLayers.Function.bindAsEventListener(this.mouseDown,this));OpenLayers.Event.observe(this.div,"dblclick",this.ignoreEvent);this.layersDiv=document.createElement("div");this.layersDiv.id=this.id+"_layersDiv";OpenLayers.Element.addClass(this.layersDiv,"layersDiv");this.baseLbl=document.createElement("div");this.baseLbl.innerHTML=OpenLayers.i18n("Base Layer");OpenLayers.Element.addClass(this.baseLbl,"baseLbl");this.baseLayersDiv=document.createElement("div");OpenLayers.Element.addClass(this.baseLayersDiv,"baseLayersDiv");this.dataLbl=document.createElement("div");this.dataLbl.innerHTML=OpenLayers.i18n("Overlays");OpenLayers.Element.addClass(this.dataLbl,"dataLbl");this.dataLayersDiv=document.createElement("div");OpenLayers.Element.addClass(this.dataLayersDiv,"dataLayersDiv");if(this.ascending){this.layersDiv.appendChild(this.baseLbl);this.layersDiv.appendChild(this.baseLayersDiv);this.layersDiv.appendChild(this.dataLbl);this.layersDiv.appendChild(this.dataLayersDiv);}else{this.layersDiv.appendChild(this.dataLbl);this.layersDiv.appendChild(this.dataLayersDiv);this.layersDiv.appendChild(this.baseLbl);this.layersDiv.appendChild(this.baseLayersDiv);}
-this.div.appendChild(this.layersDiv);if(this.roundedCorner){OpenLayers.Rico.Corner.round(this.div,{corners:"tl bl",bgColor:"transparent",color:this.roundedCornerColor,blend:false});OpenLayers.Rico.Corner.changeOpacity(this.layersDiv,0.75);}
+
+for(var i=0,len=this.dataLayers.length;i<len;i++){var layerEntry=this.dataLayers[i];layerEntry.layer.setVisibility(layerEntry.inputElem.checked);}},maximizeControl:function(e){this.div.style.width="";this.div.style.height="";this.showControls(false);if(e!=null){OpenLayers.Event.stop(e);}},minimizeControl:function(e){this.div.style.width="0px";this.div.style.height="0px";this.showControls(true);if(e!=null){OpenLayers.Event.stop(e);}},showControls:function(minimize){this.maximizeDiv.style.display=minimize?"":"none";this.minimizeDiv.style.display=minimize?"none":"";this.layersDiv.style.display=minimize?"none":"";},loadContents:function(){OpenLayers.Event.observe(this.div,"mouseup",OpenLayers.Function.bindAsEventListener(this.mouseUp,this));OpenLayers.Event.observe(this.div,"click",this.ignoreEvent);OpenLayers.Event.observe(this.div,"mousedown",OpenLayers.Function.bindAsEventListener(this.mouseDown,this));OpenLayers.Event.observe(this.div,"dblclick",this.ignoreEvent);this.layersDiv=document.createElement("div");this.layersDiv.id=this.id+"_layersDiv";OpenLayers.Element.addClass(this.layersDiv,"layersDiv");this.baseLbl=document.createElement("div");this.baseLbl.innerHTML=OpenLayers.i18n("Base Layer");OpenLayers.Element.addClass(this.baseLbl,"baseLbl");this.baseLayersDiv=document.createElement("div");OpenLayers.Element.addClass(this.baseLayersDiv,"baseLayersDiv");this.dataLbl=document.createElement("div");this.dataLbl.innerHTML=OpenLayers.i18n("Overlays");OpenLayers.Element.addClass(this.dataLbl,"dataLbl");this.dataLayersDiv=document.createElement("div");OpenLayers.Element.addClass(this.dataLayersDiv,"dataLayersDiv");
+
+// lambeth.coop
+this.ascending=true;
+
+if(this.ascending) {
+  // this.layersDiv.appendChild(this.baseLbl);
+  this.layersDiv.appendChild(this.baseLayersDiv);
+  // this.layersDiv.appendChild(this.dataLbl);
+  this.layersDiv.appendChild(this.dataLayersDiv);
+}
+else {
+  // this.layersDiv.appendChild(this.dataLbl);
+  this.layersDiv.appendChild(this.dataLayersDiv);
+  // this.layersDiv.appendChild(this.baseLbl);
+  // this.layersDiv.appendChild(br);
+  this.layersDiv.appendChild(this.baseLayersDiv);
+}
+this.div.appendChild(this.layersDiv);
+
+// lambeth.coop remove grey borders above the switcher
+//if(this.roundedCorner){OpenLayers.Rico.Corner.round(this.div,{corners:"tl bl",bgColor:"transparent",color:this.roundedCornerColor,blend:false});OpenLayers.Rico.Corner.changeOpacity(this.layersDiv,0.75);}
 var imgLocation=OpenLayers.Util.getImagesLocation();var sz=new OpenLayers.Size(18,18);var img=imgLocation+'layer-switcher-maximize.png';this.maximizeDiv=OpenLayers.Util.createAlphaImageDiv("OpenLayers_Control_MaximizeDiv",null,sz,img,"absolute");OpenLayers.Element.addClass(this.maximizeDiv,"maximizeDiv");this.maximizeDiv.style.display="none";OpenLayers.Event.observe(this.maximizeDiv,"click",OpenLayers.Function.bindAsEventListener(this.maximizeControl,this));this.div.appendChild(this.maximizeDiv);var img=imgLocation+'layer-switcher-minimize.png';var sz=new OpenLayers.Size(18,18);this.minimizeDiv=OpenLayers.Util.createAlphaImageDiv("OpenLayers_Control_MinimizeDiv",null,sz,img,"absolute");OpenLayers.Element.addClass(this.minimizeDiv,"minimizeDiv");this.minimizeDiv.style.display="none";OpenLayers.Event.observe(this.minimizeDiv,"click",OpenLayers.Function.bindAsEventListener(this.minimizeControl,this));this.div.appendChild(this.minimizeDiv);},ignoreEvent:function(evt){OpenLayers.Event.stop(evt);},mouseDown:function(evt){this.isMouseDown=true;this.ignoreEvent(evt);},mouseUp:function(evt){if(this.isMouseDown){this.isMouseDown=false;this.ignoreEvent(evt);}},CLASS_NAME:"OpenLayers.Control.LayerSwitcher"});OpenLayers.Format.WFS=OpenLayers.Class(OpenLayers.Format.GML,{layer:null,wfsns:"http://www.opengis.net/wfs",ogcns:"http://www.opengis.net/ogc",initialize:function(options,layer){OpenLayers.Format.GML.prototype.initialize.apply(this,[options]);this.layer=layer;if(this.layer.featureNS){this.featureNS=this.layer.featureNS;}
 if(this.layer.options.geometry_column){this.geometryName=this.layer.options.geometry_column;}
 if(this.layer.options.typename){this.featureName=this.layer.options.typename;}},write:function(features){var transaction=this.createElementNS(this.wfsns,'wfs:Transaction');transaction.setAttribute("version","1.0.0");transaction.setAttribute("service","WFS");for(var i=0;i<features.length;i++){switch(features[i].state){case OpenLayers.State.INSERT:transaction.appendChild(this.insert(features[i]));break;case OpenLayers.State.UPDATE:transaction.appendChild(this.update(features[i]));break;case OpenLayers.State.DELETE:transaction.appendChild(this.remove(features[i]));break;}}
