@@ -79,12 +79,24 @@ function openlayers_switcher_openlayers_map_preprocess_alter(&$map = array()) {
  * 'OpenLayers Source' textbox points at the correct OpenLayers version.
  *
  * This is important to note because we have altered the OpenLayers-2.11 version
- * of OpenLayers.js at lines 2817 and 2818 to provide the HTML structure needed 
+ * of OpenLayers.js from line 2817 onwards to provide the HTML structure needed 
  * for our css to work as we wish with the layer switcher icons.
  *
- * Applying these same changes to OpenLayers-2.12 is difficult - the structure
- * of the file is very different - so we're sticking with OpenLayers-2.11 for
- * now.
+ * Go to openlayers_switcher/OpenLayers-2.11/OpenLayers.js and search for 
+ * lambeth.coop to see where the javascript code has been changed.
+ *
+ * Applying these same changes to OpenLayers-2.12 has been difficult. It's 
+ * possible to build 2.12 so that it has a similar js to the 2.11 file.
+ * @see http://docs.openlayers.org/library/deploying.html
+ *
+ * However I could not find how to make the click event work for the
+ * aSwitcherBlock element. For that reason, we're sticking with OpenLayers-2.11
+ * for now.
+ *
+ * I suspect a way forward for OpenLayers-2.12 and future versions is to go to:
+ * OpenLayers-2.12/lib/OpenLayers/Control/LayerSwitcher.js
+ * ... search for appendChild, make the changes in that file, then build.
+ * @see http://docs.openlayers.org/library/deploying.html
  *
  * You should be able to run this diff command from the openlayers_switcher 
  * module folder to see the changes:
