@@ -23,6 +23,10 @@
 	height: 0;
 	}
 
+  .clear-left {
+    clear: left;
+  }
+
   .float-left {
     float: left;
   }
@@ -132,7 +136,7 @@ p {
 line-height: 1.8;
 color: #666;
 font-size: 1em;
-margin: 10px 0px;
+margin: 10px 0;
 }
 
 .subtitle {
@@ -141,10 +145,10 @@ color: #999;
 padding-bottom: 10px;
 }
 
-::selection {
+/*::selection {
 background: #865477;
 color: #FFFFFF;
-}
+}*/
 
 /* @end */
 
@@ -160,7 +164,7 @@ a:active {color: #000000; text-decoration: underline}
 p {font-size: 100%; margin: 3px 0 15px; line-height: 125%}
 
 h1.title {
-    font-size:3em;
+    font-size:2.6em;
 }
 
 /* Header */
@@ -543,27 +547,87 @@ width: 300px;
 
   /* ----- Homepage ------- */
 
-  /* Menu */
+  p.welcome {
+    margin: 0px;
+  }
 
+  /* Menu */
   .block-om-maximenu-om-maximenu-1 {
-    background: #F7F7F7;
-    margin-top: 20px;
-    border: 1px solid #DCDCDC;
+    margin: 30px 0 20px;
+    background-color: #F7F7F7;
+  border: 1px solid #ccc;
+  }
+
+  .block-om-maximenu-om-maximenu-1 h2.block-title {
+    font-size: 1.4em;
+    background: #EBEBEB url(../images/icon-menu.png) no-repeat 5px;
+    padding: 5px 10px;
+    margin-bottom: 0;
+    text-indent: 30px
   }
 
   .om-maximenu.om-maximenu-block ul.om-menu {
     width: 100%;
-    padding: 5px;
+    float: none;
   }
 
-  #om-maximenu-task-menu li {
-    width: 15%;
-    border-right: 1px solid #DCDCDC;
-    padding-left: 15px;
+  #om-maximenu-task-menu li.om-leaf {
+    font-size: 1em;
+    font-weight: bold;
+    padding: 5px 0;
+    width: 100%;
+    height: auto;
   }
+
+  /* Match background colour of active menu item to background of fly out */
+
+  #om-maximenu-task-menu li.open, #om-maximenu-task-menu li:hover {
+    background-color: #FFF;
+  }
+  /* properties for the main flyout */
+
+  .om-maximenu-no-style .om-maximenu-content {
+    width: 100%;
+    left: 0;
+    padding: 0;
+    top: 40px; /* sets the height between the link and fly out */
+    position: relative;
+  }
+
+  /* Main styling for the flyout */
+
+  .om-maximenu-no-style .om-maximenu-middle {
+    padding: 5px 0;
+  margin: 0 0 40px;
+    position: relative;
+      background-color: #FFF;
+  }
+
+  /* Add an arrow to indicate the drop down */
+
+  .om-maximenu ul.om-menu li.om-leaf .om-link.task {
+    background: url(../images/menu-arrow-down.png) no-repeat right;
+    text-indent: 50px;
+    padding: 0;
+    width: 100%;
+  }
+
+  /* Action Icons */
 
   .leaf-apply {
-    background: url(../images/icon-apply.png) no-repeat;
+    background: url(../images/icon-apply-30.png) no-repeat 10px 5px;
+  }
+
+  .leaf-pay {
+    background: url(../images/icon-pay-30.png) no-repeat 10px 5px;
+  }
+
+  .leaf-report-it {
+    background: url(../images/icon-report-30.png) no-repeat 10px 5px;
+  }
+
+  .leaf-book-it {
+    background: url(../images/icon-book-30.png) no-repeat 10px 5px;
   }
 
   /* Slider */
@@ -574,9 +638,18 @@ width: 300px;
     width: 100%;
   }
 
+  .caption h2 {
+    margin-bottom: 0px;
+  }
+
   .caption h2 a, .caption p {
     color: #FFF;
-    padding: 0 10px;
+    padding: 0 5px;
+    margin: 5px 0;
+  }
+
+  .caption p {
+    display: none;
   }
 
   .flexslider {
@@ -589,4 +662,8 @@ width: 300px;
     background: #795582;
     padding: 5px 10px;
     color: #FFF;
+  }
+
+  .page-node .statistics_counter {
+    display: none;
   }
