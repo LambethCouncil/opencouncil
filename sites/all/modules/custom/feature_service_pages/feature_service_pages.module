@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Feature Service Pages feature.
+ */
+
+include_once 'feature_service_pages.features.inc';
