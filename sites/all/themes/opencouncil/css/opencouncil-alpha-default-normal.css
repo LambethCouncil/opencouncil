@@ -35,3 +35,76 @@
  .olControlPanZoomBar {
  	display: block;
  }
+
+  .caption p {
+    display: block;
+  }
+
+  /* Menu */
+
+  .block-om-maximenu-om-maximenu-1 {
+    height: 40px;
+  }
+
+  .block-om-maximenu-om-maximenu-1 .content {
+    display: block!important;
+  }
+
+  .block-om-maximenu-om-maximenu-1 h2.block-title {
+  	display: none;
+  }
+
+  .om-maximenu.om-maximenu-block ul.om-menu {
+    float: left;
+  }
+
+  #om-maximenu-task-menu li.om-leaf {
+    border-right: 1px solid #DCDCDC;
+    font-size: 1.2em;
+    width: auto;
+    float: left;
+  }
+
+  /* properties for the main flyout */
+
+  .om-maximenu-no-style .om-maximenu-content {
+    width: 940px;
+    top: 40px; /* sets the height bewteen the link and fly out */
+    position: absolute;
+  }
+
+/* Main styling for the flyout */
+
+  .om-maximenu-no-style .om-maximenu-middle {
+  margin: 5px 0 0;
+    position: relative;
+    z-index: 0;
+    border: 1px solid #ccc;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+     -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+ /* Add an arrow to indicate the drop down */
+
+  .om-maximenu ul.om-menu li.om-leaf .om-link.task {
+    padding-right: 50px;
+    width: auto;
+  }
+
+  /* Need to set negative left margin for each of the fly outs - will have to set manually for each screen size */
+  .om-maximenu-no-style .leaf-apply .om-maximenu-content {
+    margin-left: 0px;
+  }
+
+  .om-maximenu-no-style .leaf-pay .om-maximenu-content {
+    margin-left: -148px;
+  }
+
+  .om-maximenu-no-style .leaf-report-it .om-maximenu-content {
+    margin-left: -148px;
+  }
+
+  .om-maximenu-no-style .leaf-book-it .om-maximenu-content {
+    margin-left: -148px;
+  }
