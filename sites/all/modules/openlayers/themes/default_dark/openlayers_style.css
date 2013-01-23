@@ -15,6 +15,7 @@ div.olLayerDiv {
 }
 
 .olLayerGoogleCopyright {
+    display: none;
     left: 2px;
     bottom: 2px;
 }
