@@ -61,6 +61,14 @@
 	left: 5px;
 }
 
+.base-layer-switcher {
+  margin: 0 2px 0 2px;
+}
+
+#OpenLayers_Control_MinimizeDiv_innerImage {
+  display: none;
+}  
+
 /* @group Icons */
 
 /* @group Car Parks */

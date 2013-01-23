@@ -29,11 +29,6 @@ function openlayers_switcher_block_view($delta = '') {
         'content' => array(
           '#markup' => _openlayers_switcher_content(),
           '#attached' => array(
-            // js commented out. jQuery changes not persisting when switchers
-            // are clicked.
-            // 'js' => array(
-              // drupal_get_path('module', 'openlayers_switcher') . '/js/openlayers_switcher.js',
-            // ),
             'css' => array(
               drupal_get_path('module', 'openlayers_switcher') . '/css/openlayers_switcher.css',
             ),
