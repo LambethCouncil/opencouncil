@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the feature_map_points_of_interest feature.
+ */
+
+include_once 'feature_map_points_of_interest.features.inc';

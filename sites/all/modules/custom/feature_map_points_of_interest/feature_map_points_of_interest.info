@@ -1,0 +1,9 @@
+name = feature_map_points_of_interest
+description = Main map for the site
+core = 7.x
+package = Features
+dependencies[] = ctools
+dependencies[] = openlayers
+features[ctools][] = openlayers:openlayers_maps:1
+features[features_api][] = api:1
+features[openlayers_maps][] = points_of_interest
