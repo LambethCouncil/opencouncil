@@ -183,5 +183,81 @@ function feature_workflow_pages_views_default_views() {
   $handler->display->display_options['fields']['field_workflow_intro']['field_api_classes'] = 0;
   $export['workflow_node'] = $view;
 
+  $view = new view;
+  $view->name = 'workflow_related_tasks';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Workflow Related Tasks';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Related Tasks';
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['query_comment'] = FALSE;
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Related Tasks */
+  $handler->display->display_options['fields']['field_workflow_related_tasks']['id'] = 'field_workflow_related_tasks';
+  $handler->display->display_options['fields']['field_workflow_related_tasks']['table'] = 'field_data_field_workflow_related_tasks';
+  $handler->display->display_options['fields']['field_workflow_related_tasks']['field'] = 'field_workflow_related_tasks';
+  $handler->display->display_options['fields']['field_workflow_related_tasks']['label'] = '';
+  $handler->display->display_options['fields']['field_workflow_related_tasks']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_workflow_related_tasks']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_workflow_related_tasks']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_workflow_related_tasks']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_workflow_related_tasks']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_workflow_related_tasks']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_workflow_related_tasks']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_workflow_related_tasks']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_workflow_related_tasks']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_workflow_related_tasks']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['field_workflow_related_tasks']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_workflow_related_tasks']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_workflow_related_tasks']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_workflow_related_tasks']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_workflow_related_tasks']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_workflow_related_tasks']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_workflow_related_tasks']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_workflow_related_tasks']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_workflow_related_tasks']['settings'] = array(
+    'link' => 1,
+  );
+  $handler->display->display_options['fields']['field_workflow_related_tasks']['group_rows'] = 1;
+  $handler->display->display_options['fields']['field_workflow_related_tasks']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_workflow_related_tasks']['delta_reversed'] = 0;
+  $handler->display->display_options['fields']['field_workflow_related_tasks']['delta_first_last'] = 0;
+  $handler->display->display_options['fields']['field_workflow_related_tasks']['field_api_classes'] = 0;
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'workflow' => 'workflow',
+  );
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block');
+  $export['workflow_related_tasks'] = $view;
+
   return $export;
 }

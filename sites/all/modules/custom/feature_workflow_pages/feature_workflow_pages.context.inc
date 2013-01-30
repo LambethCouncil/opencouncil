@@ -41,6 +41,12 @@ function feature_workflow_pages_context_default_contexts() {
           'region' => 'content',
           'weight' => 1,
         ),
+        'views-workflow_related_tasks-block' => array(
+          'module' => 'views',
+          'delta' => 'workflow_related_tasks-block',
+          'region' => 'sidebar_second',
+          'weight' => 0,
+        ),
       ),
     ),
   );
