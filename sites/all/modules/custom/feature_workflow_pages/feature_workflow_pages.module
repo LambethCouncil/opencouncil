@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the feature_workflow_pages feature.
+ */
+
+include_once 'feature_workflow_pages.features.inc';

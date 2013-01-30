@@ -663,3 +663,37 @@ width: 300px;
   .page-node .statistics_counter {
     display: none;
   }
+
+  /* Workflow Pages */
+
+  .contact {
+    padding: 10px  10px 10px 50px;
+  }
+
+  .phone {
+    background: url(../images/icon-phone.png) no-repeat left;
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+
+  .email {
+    background: url(../images/icon-email.png) no-repeat left;
+  }
+
+  .view-display-id-block_3 {
+    padding-bottom: 20px;
+  }
+
+  .view-display-id-block_3 .more-info {
+    clear: left;
+  }
+
+  .info-box {
+    padding: 10px 10px 10px 50px;
+    background: #EBEBEB;
+    margin: 10px 0;
+  }
+
+  .orange {
+    background: #FDFAC6;
+  }
