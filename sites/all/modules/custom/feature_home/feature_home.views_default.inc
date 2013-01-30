@@ -474,7 +474,7 @@ function feature_home_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'views_column_class';
-  $handler->display->display_options['style_options']['row_class'] = 'grid-4 gamma';
+  $handler->display->display_options['style_options']['row_class'] = 'grid-8 gamma';
   $handler->display->display_options['style_options']['columns'] = '2';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Field: Taxonomy term: Name */
