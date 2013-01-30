@@ -16,7 +16,16 @@ function map_center_block_view($delta = '') {
   $block = array();
   switch ($delta) {
     case 'map-center-block':
-      $block['content'] = _map_center_content();
+      $block = array(
+        'content' => array(
+          '#markup' => _map_center_content(),
+          '#attached' => array(
+            'js' => array(
+              drupal_get_path('module', 'map_center') . '/js/map_center.js',
+            ),
+          ),
+        ),
+      );
       break;
   }
   return $block;
