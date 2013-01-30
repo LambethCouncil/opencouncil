@@ -25,6 +25,7 @@ regions[sidebar_second] = Sidebar Second
 
 regions[header_first] = Header First
 regions[header_second] = Header Second
+regions[messages_and_tabs] = Messages and Tabs
 ;regions[wide_image] = Wide Image
 regions[preface_first] = Preface First
 regions[preface_second] = Preface Second
@@ -47,6 +48,7 @@ zones[user] = User
 zones[branding] = Branding
 zones[menu] = Menu
 zones[header] = Header
+zones[messages_and_tabs] = Messages and Tabs
 zones[preface] = Preface
 zones[content] = Content
 zones[postscript] = Postscript

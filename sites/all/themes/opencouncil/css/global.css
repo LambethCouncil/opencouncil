@@ -169,22 +169,22 @@ h1.title {
 
 /* Header */
 #section-content {
-    padding-top:6em;
+    padding-top:1em;
 }
 
-#section-header {
-    position:fixed;
-    background:#333;
-    width:100%;
-    z-index:100;
+.block-search {
+  text-align: right;
+  margin-top: 10px;
 }
 
-.logo-img {
-    position:relative;
-    /* this is the value for desktops */
-    /* top:12px; */
-    /* this is the value for mobile */
-    top:0;
+.block-user-menu ul.menu {
+  float: right;
+}
+
+.block-user-menu ul.menu li {
+  list-style-type: none;
+  list-style-image: none;
+  display: inline-block;
 }
 
 /* Restrict height for mobile devices */
@@ -197,30 +197,21 @@ h1.title {
 }
 
 /* Main menu */
-#zone-menu {
-    background:#383838;
-    font-size:0.8em;
-}
-
-#region-menu {
-    background:#795582;
-}
-
-#zone-menu a {
-    color:#fff;
-}
-
-.main-menu {
-	font-size: 1.2em;
-}
 
 #zone-branding-wrapper {
     /*
     fix for ie z-index problem, add this on the top container that holds your menu block
-    */
     position:relative;
     z-index:2
+    */
+    background: #383838;
+    padding: 10px 0;
 }
+
+.zone-menu {
+  padding: 10px 0 20px;
+}
+
 #block-system-main-menu {
     margin-bottom:1em;
 }
@@ -551,11 +542,16 @@ width: 300px;
     margin: 0px;
   }
 
+  .front .zone-content {
+    border-top: 1px solid #DCDCDC;
+    margin-top: 20px;
+    padding-top: 10px;
+  }
+
   /* Menu */
   .block-om-maximenu-om-maximenu-1 {
-    margin: 30px 0 20px;
     background-color: #F7F7F7;
-  border: 1px solid #ccc;
+    border: 1px solid #ccc;
   }
 
   .block-om-maximenu-om-maximenu-1 h2.block-title {
