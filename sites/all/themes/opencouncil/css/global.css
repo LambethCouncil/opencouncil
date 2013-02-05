@@ -45,6 +45,34 @@
 	
 	/* @end */
 
+/* ==========BREADCRUMB========== */
+
+#breadcrumb li {
+background: url(../images/breadcrumb.png) right no-repeat;
+padding-right: 17px;
+}
+
+#breadcrumb .last {
+background: none;
+}
+  
+#breadcrumb ul {
+padding: 10px 0;
+}
+
+#breadcrumb li {
+color: #999;
+font-size: 0.9em;
+}
+
+#breadcrumb li a.active {
+color: #999;
+}
+
+#breadcrumb li a.active:hover {
+color: #999;
+}
+
 /* @group System Messages */
 
 div.messages {
@@ -367,10 +395,6 @@ width: 300px;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
      -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
-  -webkit-transition: all 0.2s ease-in-out;
-     -moz-transition: all 0.2s ease-in-out;
-       -o-transition: all 0.2s ease-in-out;
-          transition: all 0.2s ease-in-out;
 }
 
 .block-style h2.block-title {
@@ -662,4 +686,38 @@ width: 300px;
 
   .page-node .statistics_counter {
     display: none;
+  }
+
+  /* Workflow Pages */
+
+  .contact {
+    padding: 10px  10px 10px 50px;
+  }
+
+  .phone {
+    background: url(../images/icon-phone.png) no-repeat left;
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+
+  .email {
+    background: url(../images/icon-email.png) no-repeat left;
+  }
+
+  .view-display-id-block_3 {
+    padding-bottom: 20px;
+  }
+
+  .view-display-id-block_3 .more-info {
+    clear: left;
+  }
+
+  .info-box {
+    padding: 10px 10px 10px 50px;
+    background: #EBEBEB;
+    margin: 10px 0;
+  }
+
+  .orange {
+    background: #FDFAC6;
   }
