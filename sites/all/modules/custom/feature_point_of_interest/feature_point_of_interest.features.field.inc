@@ -1421,6 +1421,95 @@ function feature_point_of_interest_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-service-field_contact'.
+  $fields['node-service-field_contact'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_contact',
+      'foreign keys' => array(
+        'node' => array(
+          'columns' => array(
+            'target_id' => 'nid',
+          ),
+          'table' => 'node',
+        ),
+      ),
+      'indexes' => array(
+        'target_id' => array(
+          0 => 'target_id',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'entityreference',
+      'settings' => array(
+        'handler' => 'base',
+        'handler_settings' => array(
+          'behaviors' => array(
+            'views-select-list' => array(
+              'status' => 0,
+            ),
+          ),
+          'sort' => array(
+            'type' => 'none',
+          ),
+          'target_bundles' => array(
+            'contact_person' => 'contact_person',
+          ),
+        ),
+        'target_type' => 'node',
+      ),
+      'translatable' => '0',
+      'type' => 'entityreference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'service',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '2',
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_contact',
+      'label' => 'Contact',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'entityreference',
+        'settings' => array(
+          'match_operator' => 'CONTAINS',
+          'path' => '',
+          'size' => '60',
+        ),
+        'type' => 'entityreference_autocomplete',
+        'weight' => '8',
+      ),
+    ),
+  );
+
   // Exported field: 'node-service-field_introduction'.
   $fields['node-service-field_introduction'] = array(
     'field_config' => array(
@@ -1458,7 +1547,7 @@ function feature_point_of_interest_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '3',
+          'weight' => '6',
         ),
         'ical' => array(
           'label' => 'above',
@@ -1544,7 +1633,7 @@ function feature_point_of_interest_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '0',
+          'weight' => '3',
         ),
         'ical' => array(
           'label' => 'above',
@@ -1620,7 +1709,7 @@ function feature_point_of_interest_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '2',
+          'weight' => '5',
         ),
         'ical' => array(
           'label' => 'above',
@@ -1672,6 +1761,167 @@ function feature_point_of_interest_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-service-field_service_relevant_places'.
+  $fields['node-service-field_service_relevant_places'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_service_relevant_places',
+      'foreign keys' => array(
+        'node' => array(
+          'columns' => array(
+            'target_id' => 'nid',
+          ),
+          'table' => 'node',
+        ),
+      ),
+      'indexes' => array(
+        'target_id' => array(
+          0 => 'target_id',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'entityreference',
+      'settings' => array(
+        'handler' => 'base',
+        'handler_settings' => array(
+          'behaviors' => array(
+            'views-select-list' => array(
+              'status' => 0,
+            ),
+          ),
+          'sort' => array(
+            'type' => 'none',
+          ),
+          'target_bundles' => array(
+            'point_of_interest' => 'point_of_interest',
+          ),
+        ),
+        'target_type' => 'node',
+      ),
+      'translatable' => '0',
+      'type' => 'entityreference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'service',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '1',
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_service_relevant_places',
+      'label' => 'Relevant Places',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'entityreference',
+        'settings' => array(
+          'match_operator' => 'CONTAINS',
+          'path' => '',
+          'size' => '60',
+        ),
+        'type' => 'entityreference_autocomplete',
+        'weight' => '7',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-service-field_service_self_service'.
+  $fields['node-service-field_service_self_service'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_service_self_service',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(),
+      'translatable' => '0',
+      'type' => 'text_long',
+    ),
+    'field_instance' => array(
+      'bundle' => 'service',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '0',
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_service_self_service',
+      'label' => 'Self Service',
+      'required' => 0,
+      'settings' => array(
+        'text_processing' => '1',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'rows' => '20',
+        ),
+        'type' => 'text_textarea',
+        'weight' => '3',
+      ),
+    ),
+  );
+
   // Exported field: 'node-service-field_title_and_description'.
   $fields['node-service-field_title_and_description'] = array(
     'field_config' => array(
@@ -1700,7 +1950,7 @@ function feature_point_of_interest_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '1',
+          'weight' => '4',
         ),
         'ical' => array(
           'label' => 'above',
@@ -1735,6 +1985,7 @@ function feature_point_of_interest_field_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Address');
+  t('Contact');
   t('Contact Person');
   t('Description');
   t('Further Information');
@@ -1746,8 +1997,10 @@ function feature_point_of_interest_field_default_fields() {
   t('Point of Interest Type');
   t('Primary Tasks');
   t('Related Pages');
+  t('Relevant Places');
   t('Resources');
   t('Secondary Tasks');
+  t('Self Service');
   t('Title');
   t('Town');
   t('Useful Links');
