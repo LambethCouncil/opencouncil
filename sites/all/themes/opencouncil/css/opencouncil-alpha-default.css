@@ -30,3 +30,13 @@
     top:10px;
     right:-10px;
 }*/
+
+/* map location preset buttons hidden by default in global.css */
+/* display: block in default css */
+#map-center-locations button {
+  display: inline;
+}
+
+div.baseLayersDiv input {
+  display: inline;
+}
