@@ -5,9 +5,9 @@ dependencies[] = "cookiecontrol"
 dependencies[] = "googleanalytics"
 core = 7.x
 
-; Information added by drupal.org packaging script on 2012-10-06
-version = "7.x-1.5+4-dev"
+; Information added by drupal.org packaging script on 2012-05-25
+version = "7.x-1.5"
 core = "7.x"
 project = "cookiecontrol"
-datestamp = "1349482262"
+datestamp = "1337978455"
 

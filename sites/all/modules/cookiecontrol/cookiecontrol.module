@@ -67,10 +67,6 @@ function cookiecontrol_preprocess_html(&$variables) {
     if ($nid = variable_get('cookiecontrol_privacynode', '')) {
       $cookiecontrol_fulltext .= t('<p>By using our site you accept the terms of our !privacynode.', array('!privacynode' => l('Privacy Policy', 'node/' . $nid)));
     }
-    
-    // Escape anything that might cause a JavaScript error
-    $cookiecontrol_text = str_replace(array("\r\n", "\n", "\r", '  '), '', $cookiecontrol_text);
-    $cookiecontrol_fulltext = str_replace(array("\r\n", "\n", "\r", '  '), '', $cookiecontrol_fulltext);
   
     $cookiecontrol_html = str_replace(array("\r\n", "\n", "\r", '  '), '', theme('cookiecontrol'));
     $cookiecontrol_position = variable_get('cookiecontrol_position', 'left');
@@ -80,7 +76,6 @@ function cookiecontrol_preprocess_html(&$variables) {
     $cookiecontrol_countries = variable_get('cookiecontrol_countries', '');
     $cookiecontrol_theme = variable_get('cookiecontrol_theme', 'dark');
     $cookiecontrol_cookiename = cookiecontrol_generatesitecookie();
-    $cookiecontrol_consentmodel = variable_get('cookiecontrol_consentmodel', 'information_only');
   
     $cookiecontrol_settings = "
     jQuery(document).ready(function($) {
@@ -88,7 +83,6 @@ function cookiecontrol_preprocess_html(&$variables) {
         introText: '{$cookiecontrol_text}',
         fullText: '{$cookiecontrol_fulltext}',
         theme: '{$cookiecontrol_theme}',
-        html: '{$cookiecontrol_html}',
         position: '{$cookiecontrol_position}',
         shape: '{$cookiecontrol_shape}',
         startOpen: {$cookiecontrol_startopen},
@@ -99,9 +93,9 @@ function cookiecontrol_preprocess_html(&$variables) {
         onCookiesNotAllowed: function(cc){cookiecontrol_cookiesnotallowed(cc)},
         countries: '{$cookiecontrol_countries}',
         subdomains: true,
+        html: '{$cookiecontrol_html}',
         cookieName: '{$cookiecontrol_cookiename}',
-        iconStatusCookieName: 'ccShowCookieIcon',
-        consentModel: '{$cookiecontrol_consentmodel}',
+        iconStatusCookieName: 'ccShowCookieIcon'
         });
       });
     ";

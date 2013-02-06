@@ -12,22 +12,7 @@
                     <div class="ccc-content">
                         <p class="ccc-intro"></p>
                         <div class="ccc-expanded"></div>
-
-                        <div id="ccc-cookies-switch" style="background-position-x: 0;">
-                          <a id="cctoggle" href="#" style="background-position-x: 0;" name="cctoggle"><span id="cctoggle-text">Cookies test</span></a>
-                        </div>
-          
-                        <div id="ccc-implicit-warning">
-                          (One cookie will be set to store your preference)
-                        </div>
-          
-                        <div id="ccc-explicit-checkbox">
-                          <label><input id="cchide-popup" type="checkbox" name="ccc-hide-popup"
-                          value="Y" /> Do not ask me again<br /></label> (Ticking this sets a
-                          cookie to hide this popup if you then hit close. This will not store any
-                          personal information)
-                        </div>
-              
+                        <button id="ccc-go" class="ccc-button ccc-accept"><?php print t('I am happy with this');?></button>
                         <p class="ccc-about">
                             <small>
                                 <a href="http://www.civicuk.com/cookie-law" target="_blank"><?php print t('About this tool');?></a>
