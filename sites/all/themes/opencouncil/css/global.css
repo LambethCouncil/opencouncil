@@ -721,3 +721,8 @@ width: 300px;
   .orange {
     background: #FDFAC6;
   }
+
+  /* cookie control module */
+  #ccc-go {
+    background-image:none;
+  }
