@@ -205,9 +205,9 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'lambethnew',
-      'username' => 'root',
-      'password' => 'root',
+      'database' => 'lambeth',
+      'username' => 'lambeth',
+      'password' => 'lambeth',
       'host' => 'localhost',
       'port' => '',
       'driver' => 'mysql',
