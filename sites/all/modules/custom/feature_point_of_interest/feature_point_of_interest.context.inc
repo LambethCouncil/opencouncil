@@ -102,23 +102,29 @@ function feature_point_of_interest_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-point_of_interest_intro-block' => array(
+        'views-service_intro-block' => array(
           'module' => 'views',
-          'delta' => 'point_of_interest_intro-block',
+          'delta' => 'service_intro-block',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+        'views-service_node_self_service-block' => array(
+          'module' => 'views',
+          'delta' => 'service_node_self_service-block',
           'region' => 'content',
           'weight' => '-9',
         ),
-        'views-f9aae51d6160850bab5b5951d83dcf67' => array(
+        'views-service_node_further_info-block' => array(
           'module' => 'views',
-          'delta' => 'f9aae51d6160850bab5b5951d83dcf67',
+          'delta' => 'service_node_further_info-block',
           'region' => 'content',
-          'weight' => '-6',
+          'weight' => '-8',
         ),
-        'views-d01d87f2ea929cdc0604bbc15e752cf2' => array(
+        'views-relevant_places-block' => array(
           'module' => 'views',
-          'delta' => 'd01d87f2ea929cdc0604bbc15e752cf2',
+          'delta' => 'relevant_places-block',
           'region' => 'content',
-          'weight' => '-5',
+          'weight' => '-7',
         ),
         'views-node_tasks-block' => array(
           'module' => 'views',
