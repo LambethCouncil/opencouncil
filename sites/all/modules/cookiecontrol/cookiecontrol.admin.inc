@@ -51,18 +51,6 @@ function cookiecontrol_admin_settings() {
     $form['interface']['cookiecontrol_privacynode']['#field_suffix'] = l(t('View existing privacy policy page'), 'node/' . $cookiecontrol_privacynode, array('attributes' => array('target' => 'new')));
   }
 
-  $form['interface']['cookiecontrol_consentmodel'] = array(
-    '#type' => 'select',
-    '#title' => 'Consent Model',
-    '#options' => array(
-      'information_only' => t('Information only'),
-      'implicit' => t('Implicit'),
-      'explicit' => t('Explicit')
-    ),
-    '#default_value' => variable_get('cookiecontrol_consentmodel', 'information_only'),
-    '#description' => t('Select the consent model you wish Cookie Control to use. In each consent model the Cookie Control panel appears to the user when they first access the site.')
-  );
-
   $form['interface']['cookiecontrol_shape'] = array(
     '#type' => 'radios',
     '#title' => t('Icon Shape'),
@@ -182,5 +170,4 @@ function cookiecontrol_admin_settings_validate($form, &$form_state) {
     
   // Remove any newlines to avoid breaking JavaScript
   form_set_value($form['interface']['cookiecontrol_text'], str_replace(array("\r\n", "\n", "\r"), '', $form_state['values']['cookiecontrol_text']), $form_state);
-  form_set_value($form['interface']['cookiecontrol_fulltext'], str_replace(array("\r\n", "\n", "\r"), '', $form_state['values']['cookiecontrol_fulltext']), $form_state);
 }

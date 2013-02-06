@@ -6,10 +6,10 @@ core = 7.x
 
 configure = admin/config/people/cookiecontrol
 
-scripts[] = js/cookieControl-5.1.min.js
-; Information added by drupal.org packaging script on 2012-10-06
-version = "7.x-1.5+4-dev"
+scripts[] = js/cookieControl-4.1.min.js
+; Information added by drupal.org packaging script on 2012-05-25
+version = "7.x-1.5"
 core = "7.x"
 project = "cookiecontrol"
-datestamp = "1349482262"
+datestamp = "1337978455"
 
