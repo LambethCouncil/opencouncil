@@ -1307,5 +1307,239 @@ function feature_point_of_interest_views_default_views() {
   $handler = $view->new_display('block', 'Block', 'block');
   $export['related_pages'] = $view;
 
+  $view = new view;
+  $view->name = 'service_intro';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Service Intro';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['query_comment'] = FALSE;
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Introduction */
+  $handler->display->display_options['fields']['field_introduction']['id'] = 'field_introduction';
+  $handler->display->display_options['fields']['field_introduction']['table'] = 'field_data_field_introduction';
+  $handler->display->display_options['fields']['field_introduction']['field'] = 'field_introduction';
+  $handler->display->display_options['fields']['field_introduction']['label'] = '';
+  $handler->display->display_options['fields']['field_introduction']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_introduction']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_introduction']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_introduction']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_introduction']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_introduction']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_introduction']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_introduction']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_introduction']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_introduction']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['field_introduction']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_introduction']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_introduction']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_introduction']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_introduction']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_introduction']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_introduction']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_introduction']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_introduction']['field_api_classes'] = 0;
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['default_argument_skip_url'] = 0;
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['nid']['break_phrase'] = 0;
+  $handler->display->display_options['arguments']['nid']['not'] = 0;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block');
+  $export['service_intro'] = $view;
+
+  $view = new view;
+  $view->name = 'service_node_further_info';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Service Node Further Info';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'More information';
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['query_comment'] = FALSE;
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Further Information */
+  $handler->display->display_options['fields']['field_title_and_description']['id'] = 'field_title_and_description';
+  $handler->display->display_options['fields']['field_title_and_description']['table'] = 'field_data_field_title_and_description';
+  $handler->display->display_options['fields']['field_title_and_description']['field'] = 'field_title_and_description';
+  $handler->display->display_options['fields']['field_title_and_description']['label'] = '';
+  $handler->display->display_options['fields']['field_title_and_description']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_title_and_description']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_title_and_description']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_title_and_description']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_title_and_description']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_title_and_description']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_title_and_description']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_title_and_description']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_title_and_description']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_title_and_description']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['field_title_and_description']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_title_and_description']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_title_and_description']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_title_and_description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_title_and_description']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_title_and_description']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_title_and_description']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_title_and_description']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_title_and_description']['type'] = 'field_collection_views_view';
+  $handler->display->display_options['fields']['field_title_and_description']['settings'] = array(
+    'name' => 'fc_title_description',
+    'display_id' => 'default',
+    'add' => 'Add',
+  );
+  $handler->display->display_options['fields']['field_title_and_description']['group_rows'] = 0;
+  $handler->display->display_options['fields']['field_title_and_description']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_title_and_description']['delta_reversed'] = 0;
+  $handler->display->display_options['fields']['field_title_and_description']['delta_first_last'] = 0;
+  $handler->display->display_options['fields']['field_title_and_description']['field_api_classes'] = 0;
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['default_argument_skip_url'] = 0;
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['nid']['break_phrase'] = 0;
+  $handler->display->display_options['arguments']['nid']['not'] = 0;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block');
+  $export['service_node_further_info'] = $view;
+
+  $view = new view;
+  $view->name = 'service_node_self_service';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Service Node Self Service';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Self Service';
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['query_comment'] = FALSE;
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Self Service */
+  $handler->display->display_options['fields']['field_service_self_service']['id'] = 'field_service_self_service';
+  $handler->display->display_options['fields']['field_service_self_service']['table'] = 'field_data_field_service_self_service';
+  $handler->display->display_options['fields']['field_service_self_service']['field'] = 'field_service_self_service';
+  $handler->display->display_options['fields']['field_service_self_service']['label'] = '';
+  $handler->display->display_options['fields']['field_service_self_service']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_service_self_service']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_service_self_service']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_service_self_service']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_service_self_service']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_service_self_service']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_service_self_service']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_service_self_service']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_service_self_service']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_service_self_service']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['field_service_self_service']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_service_self_service']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_service_self_service']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_service_self_service']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_service_self_service']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_service_self_service']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_service_self_service']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_service_self_service']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_service_self_service']['field_api_classes'] = 0;
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['default_argument_skip_url'] = 0;
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['nid']['break_phrase'] = 0;
+  $handler->display->display_options['arguments']['nid']['not'] = 0;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block');
+  $export['service_node_self_service'] = $view;
+
   return $export;
 }
